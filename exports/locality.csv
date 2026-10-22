@@ -1,0 +1,276 @@
+region,city,locality,locality_key,restaurants,rated,avg_rating,share_high_rated,avg_price_range,share_upscale
+Delhi NCR,New Delhi,Connaught Place,New Delhi · Connaught Place,122,119,3.78,0.2689,2.6,0.6311
+Delhi NCR,New Delhi,Rajouri Garden,New Delhi · Rajouri Garden,99,98,3.63,0.2449,2.2,0.404
+Delhi NCR,New Delhi,Shahdara,New Delhi · Shahdara,87,41,3.0,0.0,1.14,0.0
+Delhi NCR,New Delhi,Defence Colony,New Delhi · Defence Colony,86,79,3.49,0.1646,1.93,0.2442
+Delhi NCR,New Delhi,Pitampura,New Delhi · Pitampura,85,77,3.17,0.0,1.47,0.0471
+Delhi NCR,New Delhi,Malviya Nagar,New Delhi · Malviya Nagar,84,84,3.42,0.1071,1.77,0.0952
+Delhi NCR,New Delhi,Mayur Vihar Phase 1,New Delhi · Mayur Vihar Phase 1,84,57,2.99,0.0,1.3,0.0238
+Delhi NCR,New Delhi,Rajinder Nagar,New Delhi · Rajinder Nagar,81,78,3.06,0.0513,1.43,0.0123
+Delhi NCR,New Delhi,Safdarjung,New Delhi · Safdarjung,80,69,3.25,0.1014,1.68,0.0875
+Delhi NCR,New Delhi,Satyaniketan,New Delhi · Satyaniketan,79,78,3.53,0.1923,1.62,0.038
+Delhi NCR,Noida,Sector 62,Noida · Sector 62,76,49,3.03,0.0,1.42,0.0526
+Delhi NCR,New Delhi,Krishna Nagar,New Delhi · Krishna Nagar,76,46,3.09,0.0,1.26,0.0
+Delhi NCR,New Delhi,Karol Bagh,New Delhi · Karol Bagh,76,72,3.24,0.0417,1.57,0.0658
+Delhi NCR,Noida,Sector 18,Noida · Sector 18,75,75,3.37,0.0267,2.13,0.36
+Delhi NCR,New Delhi,Hauz Khas,New Delhi · Hauz Khas,74,57,3.25,0.0702,1.54,0.1351
+Delhi NCR,New Delhi,Kalkaji,New Delhi · Kalkaji,73,70,3.12,0.0,1.38,0.0274
+Delhi NCR,Gurgaon,DLF Phase 3,Gurgaon · DLF Phase 3,69,69,3.2,0.0725,1.43,0.029
+Delhi NCR,New Delhi,Mahipalpur,New Delhi · Mahipalpur,69,25,2.96,0.0,1.46,0.058
+Delhi NCR,New Delhi,Mukherjee Nagar,New Delhi · Mukherjee Nagar,68,24,3.01,0.0,1.07,0.0
+Delhi NCR,New Delhi,Chandni Chowk,New Delhi · Chandni Chowk,67,55,3.36,0.0727,1.12,0.0149
+Delhi NCR,New Delhi,Shalimar Bagh,New Delhi · Shalimar Bagh,67,46,3.16,0.0217,1.22,0.0
+Delhi NCR,New Delhi,Greater Kailash (GK) 1,New Delhi · Greater Kailash (GK) 1,66,66,3.7,0.2576,2.21,0.3788
+Delhi NCR,New Delhi,Greater Kailash (GK) 2,New Delhi · Greater Kailash (GK) 2,66,66,3.55,0.1364,2.18,0.3636
+Delhi NCR,New Delhi,Delhi University-GTB Nagar,New Delhi · Delhi University-GTB Nagar,65,54,3.3,0.1296,1.46,0.0615
+Delhi NCR,New Delhi,Kamla Nagar,New Delhi · Kamla Nagar,65,62,3.45,0.0323,1.45,0.0308
+Delhi NCR,New Delhi,Paharganj,New Delhi · Paharganj,64,60,3.0,0.0167,1.69,0.1094
+Delhi NCR,New Delhi,Vasundhara Enclave,New Delhi · Vasundhara Enclave,62,17,3.05,0.0,1.1,0.0
+Delhi NCR,New Delhi,Jail Road,New Delhi · Jail Road,61,50,3.12,0.02,1.21,0.0328
+Delhi NCR,Noida,Sector 72,Noida · Sector 72,61,26,3.03,0.0,1.44,0.0164
+Delhi NCR,New Delhi,Najafgarh,New Delhi · Najafgarh,60,1,2.9,0.0,1.07,0.0
+Delhi NCR,New Delhi,Punjabi Bagh,New Delhi · Punjabi Bagh,60,60,3.39,0.0667,1.9,0.1833
+Delhi NCR,New Delhi,Vikaspuri,New Delhi · Vikaspuri,60,56,3.07,0.0,1.35,0.0333
+Delhi NCR,New Delhi,Palam,New Delhi · Palam,60,12,2.9,0.0,1.2,0.0
+Delhi NCR,New Delhi,Tilak Nagar,New Delhi · Tilak Nagar,60,27,3.05,0.0,1.12,0.0
+Delhi NCR,New Delhi,Uttam Nagar,New Delhi · Uttam Nagar,59,35,2.91,0.0,1.08,0.0
+Delhi NCR,New Delhi,Laxmi Nagar,New Delhi · Laxmi Nagar,58,53,3.04,0.0189,1.33,0.0
+Delhi NCR,New Delhi,Dilshad Garden,New Delhi · Dilshad Garden,57,32,3.05,0.0,1.33,0.0175
+Delhi NCR,New Delhi,Jangpura,New Delhi · Jangpura,57,35,3.12,0.0571,1.33,0.0175
+Delhi NCR,New Delhi,Paschim Vihar,New Delhi · Paschim Vihar,56,56,3.15,0.0,1.39,0.0
+Delhi NCR,New Delhi,East of Kailash,New Delhi · East of Kailash,56,26,3.08,0.0385,1.36,0.0179
+Delhi NCR,New Delhi,Kirti Nagar,New Delhi · Kirti Nagar,56,56,3.09,0.0,1.77,0.1607
+Delhi NCR,Gurgaon,Sector 56,Gurgaon · Sector 56,54,30,3.04,0.0,1.41,0.0
+Delhi NCR,New Delhi,Naraina,New Delhi · Naraina,54,26,3.01,0.0,1.15,0.0185
+Delhi NCR,Noida,Sector 110,Noida · Sector 110,53,36,3.02,0.0278,1.64,0.0755
+Delhi NCR,Gurgaon,Sector 14,Gurgaon · Sector 14,52,45,3.0,0.0,1.42,0.0385
+Delhi NCR,New Delhi,Subhash Nagar,New Delhi · Subhash Nagar,51,18,3.03,0.0,1.12,0.0
+Delhi NCR,New Delhi,East Patel Nagar,New Delhi · East Patel Nagar,50,41,3.23,0.0244,1.52,0.1
+Delhi NCR,Gurgaon,Palam Vihar,Gurgaon · Palam Vihar,49,16,3.01,0.0,1.31,0.0
+Delhi NCR,New Delhi,Preet Vihar,New Delhi · Preet Vihar,49,30,3.13,0.0,1.37,0.0204
+Delhi NCR,New Delhi,Netaji Subhash Place,New Delhi · Netaji Subhash Place,48,48,3.53,0.125,1.65,0.2083
+Delhi NCR,New Delhi,Rohini,New Delhi · Rohini,48,48,3.35,0.0417,1.54,0.0833
+Delhi NCR,New Delhi,IP Extension,New Delhi · IP Extension,47,28,3.06,0.0357,1.3,0.0426
+Delhi NCR,New Delhi,New Friends Colony,New Delhi · New Friends Colony,47,34,3.13,0.0294,1.57,0.0426
+Delhi NCR,New Delhi,Janakpuri,New Delhi · Janakpuri,46,46,3.32,0.0435,1.74,0.087
+Delhi NCR,New Delhi,Chittaranjan Park,New Delhi · Chittaranjan Park,46,36,3.13,0.0,1.52,0.087
+Delhi NCR,New Delhi,Green Park,New Delhi · Green Park,46,34,3.29,0.0294,1.83,0.2174
+Delhi NCR,Noida,Sector 41,Noida · Sector 41,45,32,3.16,0.0313,1.53,0.0222
+Delhi NCR,New Delhi,Khan Market,New Delhi · Khan Market,44,43,3.8,0.3256,2.7,0.6136
+Delhi NCR,New Delhi,Munirka,New Delhi · Munirka,43,22,3.04,0.0,1.26,0.0233
+Delhi NCR,Noida,Sector 132,Noida · Sector 132,43,14,2.94,0.0714,1.4,0.0465
+Delhi NCR,New Delhi,Daryaganj,New Delhi · Daryaganj,43,24,3.29,0.0417,1.37,0.0233
+Delhi NCR,New Delhi,Lajpat Nagar 1,New Delhi · Lajpat Nagar 1,42,19,3.13,0.0,1.24,0.0
+Delhi NCR,New Delhi,Anand Vihar,New Delhi · Anand Vihar,42,27,3.28,0.0,1.38,0.0238
+Delhi NCR,Gurgaon,Sohna Road,Gurgaon · Sohna Road,42,42,3.26,0.0238,1.88,0.1905
+Delhi NCR,Gurgaon,"Cyber Hub, DLF Cyber City","Gurgaon · Cyber Hub, DLF Cyber City",41,41,3.86,0.3659,2.8,0.6829
+Delhi NCR,New Delhi,Nangloi,New Delhi · Nangloi,41,0,,,1.02,0.0
+Delhi NCR,Gurgaon,Old Railway Road,Gurgaon · Old Railway Road,41,36,3.09,0.0,1.41,0.0244
+Delhi NCR,New Delhi,South Extension 2,New Delhi · South Extension 2,41,34,3.33,0.0588,1.76,0.1707
+Delhi NCR,New Delhi,Moti Nagar,New Delhi · Moti Nagar,40,23,3.22,0.0,1.4,0.0
+Delhi NCR,New Delhi,Gujranwala Town,New Delhi · Gujranwala Town,39,24,3.28,0.0,1.36,0.0256
+Delhi NCR,New Delhi,Janpath,New Delhi · Janpath,39,33,3.57,0.1515,2.21,0.3846
+Delhi NCR,New Delhi,R K Puram,New Delhi · R K Puram,38,16,3.18,0.0625,1.34,0.0
+Delhi NCR,Gurgaon,Sector 29,Gurgaon · Sector 29,38,38,3.89,0.4211,2.87,0.7632
+Delhi NCR,New Delhi,GTB Nagar,New Delhi · GTB Nagar,38,18,3.36,0.0556,1.53,0.1053
+Delhi NCR,Noida,Greater Noida,Noida · Greater Noida,38,24,2.95,0.0,1.53,0.0789
+Delhi NCR,Noida,"The Great India Place, Sector 38","Noida · The Great India Place, Sector 38",37,31,3.16,0.0323,2.0,0.2973
+Delhi NCR,Gurgaon,Udyog Vihar,Gurgaon · Udyog Vihar,37,13,3.02,0.0,1.49,0.0541
+Delhi NCR,New Delhi,Ashok Vihar Phase 1,New Delhi · Ashok Vihar Phase 1,36,20,3.09,0.0,1.36,0.0278
+Delhi NCR,New Delhi,Saket,New Delhi · Saket,36,32,3.26,0.0938,1.69,0.1667
+Delhi NCR,New Delhi,Vivek Vihar,New Delhi · Vivek Vihar,36,23,3.1,0.0,1.19,0.0
+Delhi NCR,New Delhi,Vasant Vihar,New Delhi · Vasant Vihar,36,24,3.27,0.0417,1.56,0.1389
+Delhi NCR,New Delhi,Tagore Garden,New Delhi · Tagore Garden,36,21,3.28,0.0476,1.33,0.0833
+Delhi NCR,Noida,Sector 50,Noida · Sector 50,35,29,2.95,0.1034,1.71,0.0857
+Delhi NCR,Gurgaon,Sector 31,Gurgaon · Sector 31,35,31,3.2,0.0645,1.43,0.0
+Delhi NCR,New Delhi,Sainik Farms,New Delhi · Sainik Farms,35,10,2.75,0.0,1.14,0.0286
+Delhi NCR,New Delhi,MG Road,New Delhi · MG Road,34,2,2.95,0.0,1.26,0.0588
+Delhi NCR,New Delhi,Geeta Colony,New Delhi · Geeta Colony,34,15,3.08,0.0,1.21,0.0
+Delhi NCR,New Delhi,Alaknanda,New Delhi · Alaknanda,32,24,3.13,0.0,1.38,0.0
+Delhi NCR,New Delhi,Chanakyapuri,New Delhi · Chanakyapuri,32,28,3.09,0.0,1.84,0.0938
+Delhi NCR,New Delhi,Nehru Place,New Delhi · Nehru Place,32,25,3.2,0.04,1.53,0.1563
+Delhi NCR,New Delhi,Mayur Vihar Phase 3,New Delhi · Mayur Vihar Phase 3,32,20,2.94,0.0,1.28,0.0
+Delhi NCR,New Delhi,Lodhi Colony,New Delhi · Lodhi Colony,31,30,3.29,0.1,2.03,0.3226
+Delhi NCR,New Delhi,Vijay Nagar,New Delhi · Vijay Nagar,31,31,3.61,0.2258,1.48,0.0
+Delhi NCR,Gurgaon,Sector 45,Gurgaon · Sector 45,31,15,3.15,0.0,1.35,0.0
+Delhi NCR,Noida,"DLF Mall of India, Sector 18,  Noida","Noida · DLF Mall of India, Sector 18,  Noida",31,31,3.84,0.3226,2.23,0.4516
+Delhi NCR,Faridabad,Sector 15,Faridabad · Sector 15,31,31,3.43,0.0645,1.48,0.0323
+Delhi NCR,Noida,"Logix City Centre, Sector 32, Noida","Noida · Logix City Centre, Sector 32, Noida",30,19,3.02,0.0,1.57,0.1
+Delhi NCR,Gurgaon,Sushant Lok,Gurgaon · Sushant Lok,30,25,3.5,0.2,1.77,0.1333
+Delhi NCR,New Delhi,Mayur Vihar Phase 2,New Delhi · Mayur Vihar Phase 2,29,26,3.13,0.0,1.24,0.0345
+Delhi NCR,Noida,Sector 15,Noida · Sector 15,29,15,3.09,0.0,1.21,0.0345
+Delhi NCR,Noida,Sector 51,Noida · Sector 51,28,11,3.15,0.0,1.61,0.0
+Delhi NCR,Gurgaon,DLF Phase 1,Gurgaon · DLF Phase 1,27,23,3.35,0.0435,1.78,0.1111
+Delhi NCR,Gurgaon,Golf Course Road,Gurgaon · Golf Course Road,27,27,3.56,0.1481,2.44,0.4074
+Delhi NCR,New Delhi,Shakarpur,New Delhi · Shakarpur,27,7,2.94,0.0,1.15,0.0
+Delhi NCR,New Delhi,"Pacific Mall, Tagore Garden","New Delhi · Pacific Mall, Tagore Garden",27,23,3.2,0.0,1.74,0.1481
+Delhi NCR,Noida,Sector 27,Noida · Sector 27,26,19,2.99,0.0,1.15,0.0
+Delhi NCR,New Delhi,"V3S Mall, Laxmi Nagar","New Delhi · V3S Mall, Laxmi Nagar",26,26,2.82,0.0,1.77,0.2308
+Delhi NCR,New Delhi,Jama Masjid,New Delhi · Jama Masjid,26,18,3.56,0.2222,1.19,0.0
+Delhi NCR,New Delhi,Shahpur Jat,New Delhi · Shahpur Jat,26,26,3.72,0.3846,2.23,0.3462
+Delhi NCR,New Delhi,Sarita Vihar,New Delhi · Sarita Vihar,26,13,3.0,0.0,1.23,0.0
+Delhi NCR,New Delhi,Model Town 2,New Delhi · Model Town 2,25,25,3.26,0.04,1.48,0.08
+Delhi NCR,Noida,Sector 37,Noida · Sector 37,25,21,3.57,0.1429,1.36,0.0
+Delhi NCR,New Delhi,"Select Citywalk Mall, Saket","New Delhi · Select Citywalk Mall, Saket",25,25,3.76,0.32,2.2,0.28
+Delhi NCR,Gurgaon,"Unitech Infospace, Sector 21, Gurgaon","Gurgaon · Unitech Infospace, Sector 21, Gurgaon",25,22,3.22,0.0,1.64,0.04
+Delhi NCR,New Delhi,Majnu ka Tila,New Delhi · Majnu ka Tila,25,4,3.1,0.0,1.32,0.0
+Delhi NCR,New Delhi,Yusuf Sarai,New Delhi · Yusuf Sarai,25,16,3.08,0.0,1.24,0.04
+Delhi NCR,New Delhi,Hauz Khas Village,New Delhi · Hauz Khas Village,24,24,3.85,0.3333,2.79,0.7917
+Delhi NCR,Gurgaon,"MGF Metropolitan Mall, MG Road","Gurgaon · MGF Metropolitan Mall, MG Road",24,24,3.24,0.0417,2.13,0.2083
+Delhi NCR,Gurgaon,MG Road,Gurgaon · MG Road,24,24,3.17,0.0417,2.13,0.2917
+Delhi NCR,Noida,Sector 44,Noida · Sector 44,23,13,3.13,0.0,1.52,0.0
+Delhi NCR,New Delhi,Vasant Kunj,New Delhi · Vasant Kunj,23,22,3.69,0.1364,2.26,0.2609
+Delhi NCR,New Delhi,Qutab Institutional Area,New Delhi · Qutab Institutional Area,23,3,2.9,0.0,1.22,0.0
+Delhi NCR,New Delhi,"Moments Mall, Kirti Nagar","New Delhi · Moments Mall, Kirti Nagar",23,23,3.23,0.087,1.7,0.1304
+Delhi NCR,New Delhi,Karkardooma,New Delhi · Karkardooma,23,23,3.48,0.087,1.87,0.3043
+Delhi NCR,Noida,Sector 12,Noida · Sector 12,22,10,2.92,0.0,1.32,0.0455
+Delhi NCR,New Delhi,Kailash Colony,New Delhi · Kailash Colony,22,13,3.5,0.2308,1.68,0.1818
+Delhi NCR,New Delhi,Lajpat Nagar 2,New Delhi · Lajpat Nagar 2,22,21,3.25,0.0,1.95,0.1364
+Delhi NCR,New Delhi,"Epicuria Food Mall, Nehru Place","New Delhi · Epicuria Food Mall, Nehru Place",21,20,3.51,0.2,2.14,0.3333
+Delhi NCR,Gurgaon,DLF Phase 4,Gurgaon · DLF Phase 4,21,21,3.8,0.3333,2.19,0.1905
+Delhi NCR,New Delhi,Jasola,New Delhi · Jasola,21,20,3.15,0.0,1.81,0.1905
+Delhi NCR,Gurgaon,Sector 17,Gurgaon · Sector 17,21,1,3.4,0.0,1.24,0.0
+Delhi NCR,New Delhi,Mehrauli,New Delhi · Mehrauli,20,4,2.93,0.0,1.2,0.0
+Delhi NCR,New Delhi,Pandav Nagar,New Delhi · Pandav Nagar,20,2,2.9,0.0,1.15,0.0
+Delhi NCR,Faridabad,Sector 37,Faridabad · Sector 37,20,10,3.03,0.0,1.35,0.05
+Delhi NCR,New Delhi,"Dilli Haat, INA","New Delhi · Dilli Haat, INA",20,20,3.23,0.0,1.35,0.0
+Delhi NCR,Gurgaon,Sector 39,Gurgaon · Sector 39,20,2,3.0,0.0,1.4,0.0
+Faridabad,Faridabad,Sector 15,Faridabad · Sector 15,31,31,3.43,0.0645,1.48,0.0323
+Faridabad,Faridabad,Sector 37,Faridabad · Sector 37,20,10,3.03,0.0,1.35,0.05
+Gurgaon,Gurgaon,DLF Phase 3,Gurgaon · DLF Phase 3,69,69,3.2,0.0725,1.43,0.029
+Gurgaon,Gurgaon,Sector 56,Gurgaon · Sector 56,54,30,3.04,0.0,1.41,0.0
+Gurgaon,Gurgaon,Sector 14,Gurgaon · Sector 14,52,45,3.0,0.0,1.42,0.0385
+Gurgaon,Gurgaon,Palam Vihar,Gurgaon · Palam Vihar,49,16,3.01,0.0,1.31,0.0
+Gurgaon,Gurgaon,Sohna Road,Gurgaon · Sohna Road,42,42,3.26,0.0238,1.88,0.1905
+Gurgaon,Gurgaon,Old Railway Road,Gurgaon · Old Railway Road,41,36,3.09,0.0,1.41,0.0244
+Gurgaon,Gurgaon,"Cyber Hub, DLF Cyber City","Gurgaon · Cyber Hub, DLF Cyber City",41,41,3.86,0.3659,2.8,0.6829
+Gurgaon,Gurgaon,Sector 29,Gurgaon · Sector 29,38,38,3.89,0.4211,2.87,0.7632
+Gurgaon,Gurgaon,Udyog Vihar,Gurgaon · Udyog Vihar,37,13,3.02,0.0,1.49,0.0541
+Gurgaon,Gurgaon,Sector 31,Gurgaon · Sector 31,35,31,3.2,0.0645,1.43,0.0
+Gurgaon,Gurgaon,Sector 45,Gurgaon · Sector 45,31,15,3.15,0.0,1.35,0.0
+Gurgaon,Gurgaon,Sushant Lok,Gurgaon · Sushant Lok,30,25,3.5,0.2,1.77,0.1333
+Gurgaon,Gurgaon,Golf Course Road,Gurgaon · Golf Course Road,27,27,3.56,0.1481,2.44,0.4074
+Gurgaon,Gurgaon,DLF Phase 1,Gurgaon · DLF Phase 1,27,23,3.35,0.0435,1.78,0.1111
+Gurgaon,Gurgaon,"Unitech Infospace, Sector 21, Gurgaon","Gurgaon · Unitech Infospace, Sector 21, Gurgaon",25,22,3.22,0.0,1.64,0.04
+Gurgaon,Gurgaon,"MGF Metropolitan Mall, MG Road","Gurgaon · MGF Metropolitan Mall, MG Road",24,24,3.24,0.0417,2.13,0.2083
+Gurgaon,Gurgaon,MG Road,Gurgaon · MG Road,24,24,3.17,0.0417,2.13,0.2917
+Gurgaon,Gurgaon,Sector 17,Gurgaon · Sector 17,21,1,3.4,0.0,1.24,0.0
+Gurgaon,Gurgaon,DLF Phase 4,Gurgaon · DLF Phase 4,21,21,3.8,0.3333,2.19,0.1905
+Gurgaon,Gurgaon,Sector 39,Gurgaon · Sector 39,20,2,3.0,0.0,1.4,0.0
+New Delhi,New Delhi,Connaught Place,New Delhi · Connaught Place,122,119,3.78,0.2689,2.6,0.6311
+New Delhi,New Delhi,Rajouri Garden,New Delhi · Rajouri Garden,99,98,3.63,0.2449,2.2,0.404
+New Delhi,New Delhi,Shahdara,New Delhi · Shahdara,87,41,3.0,0.0,1.14,0.0
+New Delhi,New Delhi,Defence Colony,New Delhi · Defence Colony,86,79,3.49,0.1646,1.93,0.2442
+New Delhi,New Delhi,Pitampura,New Delhi · Pitampura,85,77,3.17,0.0,1.47,0.0471
+New Delhi,New Delhi,Malviya Nagar,New Delhi · Malviya Nagar,84,84,3.42,0.1071,1.77,0.0952
+New Delhi,New Delhi,Mayur Vihar Phase 1,New Delhi · Mayur Vihar Phase 1,84,57,2.99,0.0,1.3,0.0238
+New Delhi,New Delhi,Rajinder Nagar,New Delhi · Rajinder Nagar,81,78,3.06,0.0513,1.43,0.0123
+New Delhi,New Delhi,Safdarjung,New Delhi · Safdarjung,80,69,3.25,0.1014,1.68,0.0875
+New Delhi,New Delhi,Satyaniketan,New Delhi · Satyaniketan,79,78,3.53,0.1923,1.62,0.038
+New Delhi,New Delhi,Karol Bagh,New Delhi · Karol Bagh,76,72,3.24,0.0417,1.57,0.0658
+New Delhi,New Delhi,Krishna Nagar,New Delhi · Krishna Nagar,76,46,3.09,0.0,1.26,0.0
+New Delhi,New Delhi,Hauz Khas,New Delhi · Hauz Khas,74,57,3.25,0.0702,1.54,0.1351
+New Delhi,New Delhi,Kalkaji,New Delhi · Kalkaji,73,70,3.12,0.0,1.38,0.0274
+New Delhi,New Delhi,Mahipalpur,New Delhi · Mahipalpur,69,25,2.96,0.0,1.46,0.058
+New Delhi,New Delhi,Mukherjee Nagar,New Delhi · Mukherjee Nagar,68,24,3.01,0.0,1.07,0.0
+New Delhi,New Delhi,Shalimar Bagh,New Delhi · Shalimar Bagh,67,46,3.16,0.0217,1.22,0.0
+New Delhi,New Delhi,Chandni Chowk,New Delhi · Chandni Chowk,67,55,3.36,0.0727,1.12,0.0149
+New Delhi,New Delhi,Greater Kailash (GK) 2,New Delhi · Greater Kailash (GK) 2,66,66,3.55,0.1364,2.18,0.3636
+New Delhi,New Delhi,Greater Kailash (GK) 1,New Delhi · Greater Kailash (GK) 1,66,66,3.7,0.2576,2.21,0.3788
+New Delhi,New Delhi,Delhi University-GTB Nagar,New Delhi · Delhi University-GTB Nagar,65,54,3.3,0.1296,1.46,0.0615
+New Delhi,New Delhi,Kamla Nagar,New Delhi · Kamla Nagar,65,62,3.45,0.0323,1.45,0.0308
+New Delhi,New Delhi,Paharganj,New Delhi · Paharganj,64,60,3.0,0.0167,1.69,0.1094
+New Delhi,New Delhi,Vasundhara Enclave,New Delhi · Vasundhara Enclave,62,17,3.05,0.0,1.1,0.0
+New Delhi,New Delhi,Jail Road,New Delhi · Jail Road,61,50,3.12,0.02,1.21,0.0328
+New Delhi,New Delhi,Punjabi Bagh,New Delhi · Punjabi Bagh,60,60,3.39,0.0667,1.9,0.1833
+New Delhi,New Delhi,Palam,New Delhi · Palam,60,12,2.9,0.0,1.2,0.0
+New Delhi,New Delhi,Vikaspuri,New Delhi · Vikaspuri,60,56,3.07,0.0,1.35,0.0333
+New Delhi,New Delhi,Najafgarh,New Delhi · Najafgarh,60,1,2.9,0.0,1.07,0.0
+New Delhi,New Delhi,Tilak Nagar,New Delhi · Tilak Nagar,60,27,3.05,0.0,1.12,0.0
+New Delhi,New Delhi,Uttam Nagar,New Delhi · Uttam Nagar,59,35,2.91,0.0,1.08,0.0
+New Delhi,New Delhi,Laxmi Nagar,New Delhi · Laxmi Nagar,58,53,3.04,0.0189,1.33,0.0
+New Delhi,New Delhi,Jangpura,New Delhi · Jangpura,57,35,3.12,0.0571,1.33,0.0175
+New Delhi,New Delhi,Dilshad Garden,New Delhi · Dilshad Garden,57,32,3.05,0.0,1.33,0.0175
+New Delhi,New Delhi,Paschim Vihar,New Delhi · Paschim Vihar,56,56,3.15,0.0,1.39,0.0
+New Delhi,New Delhi,Kirti Nagar,New Delhi · Kirti Nagar,56,56,3.09,0.0,1.77,0.1607
+New Delhi,New Delhi,East of Kailash,New Delhi · East of Kailash,56,26,3.08,0.0385,1.36,0.0179
+New Delhi,New Delhi,Naraina,New Delhi · Naraina,54,26,3.01,0.0,1.15,0.0185
+New Delhi,New Delhi,Subhash Nagar,New Delhi · Subhash Nagar,51,18,3.03,0.0,1.12,0.0
+New Delhi,New Delhi,East Patel Nagar,New Delhi · East Patel Nagar,50,41,3.23,0.0244,1.52,0.1
+New Delhi,New Delhi,Preet Vihar,New Delhi · Preet Vihar,49,30,3.13,0.0,1.37,0.0204
+New Delhi,New Delhi,Rohini,New Delhi · Rohini,48,48,3.35,0.0417,1.54,0.0833
+New Delhi,New Delhi,Netaji Subhash Place,New Delhi · Netaji Subhash Place,48,48,3.53,0.125,1.65,0.2083
+New Delhi,New Delhi,IP Extension,New Delhi · IP Extension,47,28,3.06,0.0357,1.3,0.0426
+New Delhi,New Delhi,New Friends Colony,New Delhi · New Friends Colony,47,34,3.13,0.0294,1.57,0.0426
+New Delhi,New Delhi,Janakpuri,New Delhi · Janakpuri,46,46,3.32,0.0435,1.74,0.087
+New Delhi,New Delhi,Green Park,New Delhi · Green Park,46,34,3.29,0.0294,1.83,0.2174
+New Delhi,New Delhi,Chittaranjan Park,New Delhi · Chittaranjan Park,46,36,3.13,0.0,1.52,0.087
+New Delhi,New Delhi,Khan Market,New Delhi · Khan Market,44,43,3.8,0.3256,2.7,0.6136
+New Delhi,New Delhi,Munirka,New Delhi · Munirka,43,22,3.04,0.0,1.26,0.0233
+New Delhi,New Delhi,Daryaganj,New Delhi · Daryaganj,43,24,3.29,0.0417,1.37,0.0233
+New Delhi,New Delhi,Anand Vihar,New Delhi · Anand Vihar,42,27,3.28,0.0,1.38,0.0238
+New Delhi,New Delhi,Lajpat Nagar 1,New Delhi · Lajpat Nagar 1,42,19,3.13,0.0,1.24,0.0
+New Delhi,New Delhi,Nangloi,New Delhi · Nangloi,41,0,,,1.02,0.0
+New Delhi,New Delhi,South Extension 2,New Delhi · South Extension 2,41,34,3.33,0.0588,1.76,0.1707
+New Delhi,New Delhi,Moti Nagar,New Delhi · Moti Nagar,40,23,3.22,0.0,1.4,0.0
+New Delhi,New Delhi,Janpath,New Delhi · Janpath,39,33,3.57,0.1515,2.21,0.3846
+New Delhi,New Delhi,Gujranwala Town,New Delhi · Gujranwala Town,39,24,3.28,0.0,1.36,0.0256
+New Delhi,New Delhi,R K Puram,New Delhi · R K Puram,38,16,3.18,0.0625,1.34,0.0
+New Delhi,New Delhi,GTB Nagar,New Delhi · GTB Nagar,38,18,3.36,0.0556,1.53,0.1053
+New Delhi,New Delhi,Saket,New Delhi · Saket,36,32,3.26,0.0938,1.69,0.1667
+New Delhi,New Delhi,Vasant Vihar,New Delhi · Vasant Vihar,36,24,3.27,0.0417,1.56,0.1389
+New Delhi,New Delhi,Vivek Vihar,New Delhi · Vivek Vihar,36,23,3.1,0.0,1.19,0.0
+New Delhi,New Delhi,Ashok Vihar Phase 1,New Delhi · Ashok Vihar Phase 1,36,20,3.09,0.0,1.36,0.0278
+New Delhi,New Delhi,Tagore Garden,New Delhi · Tagore Garden,36,21,3.28,0.0476,1.33,0.0833
+New Delhi,New Delhi,Sainik Farms,New Delhi · Sainik Farms,35,10,2.75,0.0,1.14,0.0286
+New Delhi,New Delhi,MG Road,New Delhi · MG Road,34,2,2.95,0.0,1.26,0.0588
+New Delhi,New Delhi,Geeta Colony,New Delhi · Geeta Colony,34,15,3.08,0.0,1.21,0.0
+New Delhi,New Delhi,Mayur Vihar Phase 3,New Delhi · Mayur Vihar Phase 3,32,20,2.94,0.0,1.28,0.0
+New Delhi,New Delhi,Alaknanda,New Delhi · Alaknanda,32,24,3.13,0.0,1.38,0.0
+New Delhi,New Delhi,Chanakyapuri,New Delhi · Chanakyapuri,32,28,3.09,0.0,1.84,0.0938
+New Delhi,New Delhi,Nehru Place,New Delhi · Nehru Place,32,25,3.2,0.04,1.53,0.1563
+New Delhi,New Delhi,Vijay Nagar,New Delhi · Vijay Nagar,31,31,3.61,0.2258,1.48,0.0
+New Delhi,New Delhi,Lodhi Colony,New Delhi · Lodhi Colony,31,30,3.29,0.1,2.03,0.3226
+New Delhi,New Delhi,Mayur Vihar Phase 2,New Delhi · Mayur Vihar Phase 2,29,26,3.13,0.0,1.24,0.0345
+New Delhi,New Delhi,Shakarpur,New Delhi · Shakarpur,27,7,2.94,0.0,1.15,0.0
+New Delhi,New Delhi,"Pacific Mall, Tagore Garden","New Delhi · Pacific Mall, Tagore Garden",27,23,3.2,0.0,1.74,0.1481
+New Delhi,New Delhi,"V3S Mall, Laxmi Nagar","New Delhi · V3S Mall, Laxmi Nagar",26,26,2.82,0.0,1.77,0.2308
+New Delhi,New Delhi,Sarita Vihar,New Delhi · Sarita Vihar,26,13,3.0,0.0,1.23,0.0
+New Delhi,New Delhi,Shahpur Jat,New Delhi · Shahpur Jat,26,26,3.72,0.3846,2.23,0.3462
+New Delhi,New Delhi,Jama Masjid,New Delhi · Jama Masjid,26,18,3.56,0.2222,1.19,0.0
+New Delhi,New Delhi,Majnu ka Tila,New Delhi · Majnu ka Tila,25,4,3.1,0.0,1.32,0.0
+New Delhi,New Delhi,"Select Citywalk Mall, Saket","New Delhi · Select Citywalk Mall, Saket",25,25,3.76,0.32,2.2,0.28
+New Delhi,New Delhi,Yusuf Sarai,New Delhi · Yusuf Sarai,25,16,3.08,0.0,1.24,0.04
+New Delhi,New Delhi,Model Town 2,New Delhi · Model Town 2,25,25,3.26,0.04,1.48,0.08
+New Delhi,New Delhi,Hauz Khas Village,New Delhi · Hauz Khas Village,24,24,3.85,0.3333,2.79,0.7917
+New Delhi,New Delhi,Qutab Institutional Area,New Delhi · Qutab Institutional Area,23,3,2.9,0.0,1.22,0.0
+New Delhi,New Delhi,Karkardooma,New Delhi · Karkardooma,23,23,3.48,0.087,1.87,0.3043
+New Delhi,New Delhi,"Moments Mall, Kirti Nagar","New Delhi · Moments Mall, Kirti Nagar",23,23,3.23,0.087,1.7,0.1304
+New Delhi,New Delhi,Vasant Kunj,New Delhi · Vasant Kunj,23,22,3.69,0.1364,2.26,0.2609
+New Delhi,New Delhi,Kailash Colony,New Delhi · Kailash Colony,22,13,3.5,0.2308,1.68,0.1818
+New Delhi,New Delhi,Lajpat Nagar 2,New Delhi · Lajpat Nagar 2,22,21,3.25,0.0,1.95,0.1364
+New Delhi,New Delhi,Jasola,New Delhi · Jasola,21,20,3.15,0.0,1.81,0.1905
+New Delhi,New Delhi,"Epicuria Food Mall, Nehru Place","New Delhi · Epicuria Food Mall, Nehru Place",21,20,3.51,0.2,2.14,0.3333
+New Delhi,New Delhi,Pandav Nagar,New Delhi · Pandav Nagar,20,2,2.9,0.0,1.15,0.0
+New Delhi,New Delhi,"Dilli Haat, INA","New Delhi · Dilli Haat, INA",20,20,3.23,0.0,1.35,0.0
+New Delhi,New Delhi,Mehrauli,New Delhi · Mehrauli,20,4,2.93,0.0,1.2,0.0
+Noida,Noida,Sector 62,Noida · Sector 62,76,49,3.03,0.0,1.42,0.0526
+Noida,Noida,Sector 18,Noida · Sector 18,75,75,3.37,0.0267,2.13,0.36
+Noida,Noida,Sector 72,Noida · Sector 72,61,26,3.03,0.0,1.44,0.0164
+Noida,Noida,Sector 110,Noida · Sector 110,53,36,3.02,0.0278,1.64,0.0755
+Noida,Noida,Sector 41,Noida · Sector 41,45,32,3.16,0.0313,1.53,0.0222
+Noida,Noida,Sector 132,Noida · Sector 132,43,14,2.94,0.0714,1.4,0.0465
+Noida,Noida,Greater Noida,Noida · Greater Noida,38,24,2.95,0.0,1.53,0.0789
+Noida,Noida,"The Great India Place, Sector 38","Noida · The Great India Place, Sector 38",37,31,3.16,0.0323,2.0,0.2973
+Noida,Noida,Sector 50,Noida · Sector 50,35,29,2.95,0.1034,1.71,0.0857
+Noida,Noida,"DLF Mall of India, Sector 18,  Noida","Noida · DLF Mall of India, Sector 18,  Noida",31,31,3.84,0.3226,2.23,0.4516
+Noida,Noida,"Logix City Centre, Sector 32, Noida","Noida · Logix City Centre, Sector 32, Noida",30,19,3.02,0.0,1.57,0.1
+Noida,Noida,Sector 15,Noida · Sector 15,29,15,3.09,0.0,1.21,0.0345
+Noida,Noida,Sector 51,Noida · Sector 51,28,11,3.15,0.0,1.61,0.0
+Noida,Noida,Sector 27,Noida · Sector 27,26,19,2.99,0.0,1.15,0.0
+Noida,Noida,Sector 37,Noida · Sector 37,25,21,3.57,0.1429,1.36,0.0
+Noida,Noida,Sector 44,Noida · Sector 44,23,13,3.13,0.0,1.52,0.0
+Noida,Noida,Sector 12,Noida · Sector 12,22,10,2.92,0.0,1.32,0.0455
+Outside India,Athens,Athens,Athens · Athens,20,20,4.2,0.9,1.6,0.2
+Outside India,Valdosta,Valdosta,Valdosta · Valdosta,20,20,3.72,0.05,2.25,0.35
+Outside India,Dubuque,Dubuque,Dubuque · Dubuque,20,20,3.54,0.0,1.9,0.2

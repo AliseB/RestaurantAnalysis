@@ -1,0 +1,103 @@
+region,service,price_range,offered,row_key,rated,avg_rating
+All,Online delivery,1,Not offered,All|Online delivery|1|false,2096,3.23
+All,Online delivery,1,Offered,All|Online delivery|1|true,648,3.26
+All,Online delivery,2,Not offered,All|Online delivery|2|false,1466,3.41
+All,Online delivery,2,Offered,All|Online delivery|2|true,1245,3.33
+All,Online delivery,3,Not offered,All|Online delivery|3|false,964,3.83
+All,Online delivery,3,Offered,All|Online delivery|3|true,409,3.65
+All,Online delivery,4,Not offered,All|Online delivery|4|false,522,3.89
+All,Online delivery,4,Offered,All|Online delivery|4|true,53,3.93
+All,Table booking,1,Not offered,All|Table booking|1|false,2743,3.24
+All,Table booking,2,Not offered,All|Table booking|2|false,2491,3.38
+All,Table booking,2,Offered,All|Table booking|2|true,220,3.37
+All,Table booking,3,Not offered,All|Table booking|3|false,749,3.91
+All,Table booking,3,Offered,All|Table booking|3|true,624,3.62
+All,Table booking,4,Not offered,All|Table booking|4|false,309,4.05
+All,Table booking,4,Offered,All|Table booking|4|true,266,3.7
+Delhi NCR,Online delivery,1,Not offered,Delhi NCR|Online delivery|1|false,1889,3.15
+Delhi NCR,Online delivery,1,Offered,Delhi NCR|Online delivery|1|true,642,3.25
+Delhi NCR,Online delivery,2,Not offered,Delhi NCR|Online delivery|2|false,1006,3.18
+Delhi NCR,Online delivery,2,Offered,Delhi NCR|Online delivery|2|true,1194,3.3
+Delhi NCR,Online delivery,3,Not offered,Delhi NCR|Online delivery|3|false,430,3.57
+Delhi NCR,Online delivery,3,Offered,Delhi NCR|Online delivery|3|true,353,3.56
+Delhi NCR,Online delivery,4,Not offered,Delhi NCR|Online delivery|4|false,256,3.62
+Delhi NCR,Online delivery,4,Offered,Delhi NCR|Online delivery|4|true,38,3.82
+Delhi NCR,Table booking,1,Not offered,Delhi NCR|Table booking|1|false,2530,3.18
+Delhi NCR,Table booking,2,Not offered,Delhi NCR|Table booking|2|false,1998,3.24
+Delhi NCR,Table booking,2,Offered,Delhi NCR|Table booking|2|true,202,3.3
+Delhi NCR,Table booking,3,Not offered,Delhi NCR|Table booking|3|false,224,3.62
+Delhi NCR,Table booking,3,Offered,Delhi NCR|Table booking|3|true,559,3.54
+Delhi NCR,Table booking,4,Not offered,Delhi NCR|Table booking|4|false,54,3.78
+Delhi NCR,Table booking,4,Offered,Delhi NCR|Table booking|4|true,240,3.62
+Faridabad,Online delivery,1,Not offered,Faridabad|Online delivery|1|false,70,3.09
+Faridabad,Online delivery,2,Not offered,Faridabad|Online delivery|2|false,40,3.05
+Faridabad,Online delivery,2,Offered,Faridabad|Online delivery|2|true,24,3.13
+Faridabad,Table booking,1,Not offered,Faridabad|Table booking|1|false,77,3.08
+Faridabad,Table booking,2,Not offered,Faridabad|Table booking|2|false,59,3.06
+Gurgaon,Online delivery,1,Not offered,Gurgaon|Online delivery|1|false,180,3.1
+Gurgaon,Online delivery,1,Offered,Gurgaon|Online delivery|1|true,108,3.28
+Gurgaon,Online delivery,2,Not offered,Gurgaon|Online delivery|2|false,149,3.16
+Gurgaon,Online delivery,2,Offered,Gurgaon|Online delivery|2|true,231,3.37
+Gurgaon,Online delivery,3,Not offered,Gurgaon|Online delivery|3|false,95,3.58
+Gurgaon,Online delivery,3,Offered,Gurgaon|Online delivery|3|true,62,3.62
+Gurgaon,Online delivery,4,Not offered,Gurgaon|Online delivery|4|false,54,3.61
+Gurgaon,Online delivery,4,Offered,Gurgaon|Online delivery|4|true,11,3.92
+Gurgaon,Table booking,1,Not offered,Gurgaon|Table booking|1|false,288,3.17
+Gurgaon,Table booking,2,Not offered,Gurgaon|Table booking|2|false,347,3.28
+Gurgaon,Table booking,2,Offered,Gurgaon|Table booking|2|true,33,3.38
+Gurgaon,Table booking,3,Not offered,Gurgaon|Table booking|3|false,40,3.6
+Gurgaon,Table booking,3,Offered,Gurgaon|Table booking|3|true,117,3.59
+Gurgaon,Table booking,4,Not offered,Gurgaon|Table booking|4|false,14,3.76
+Gurgaon,Table booking,4,Offered,Gurgaon|Table booking|4|true,51,3.64
+New Delhi,Online delivery,1,Not offered,New Delhi|Online delivery|1|false,1446,3.17
+New Delhi,Online delivery,1,Offered,New Delhi|Online delivery|1|true,427,3.27
+New Delhi,Online delivery,2,Not offered,New Delhi|Online delivery|2|false,698,3.22
+New Delhi,Online delivery,2,Offered,New Delhi|Online delivery|2|true,740,3.31
+New Delhi,Online delivery,3,Not offered,New Delhi|Online delivery|3|false,281,3.6
+New Delhi,Online delivery,3,Offered,New Delhi|Online delivery|3|true,246,3.59
+New Delhi,Online delivery,4,Not offered,New Delhi|Online delivery|4|false,187,3.67
+New Delhi,Online delivery,4,Offered,New Delhi|Online delivery|4|true,23,3.84
+New Delhi,Table booking,1,Not offered,New Delhi|Table booking|1|false,1872,3.19
+New Delhi,Table booking,2,Not offered,New Delhi|Table booking|2|false,1299,3.26
+New Delhi,Table booking,2,Offered,New Delhi|Table booking|2|true,139,3.31
+New Delhi,Table booking,3,Not offered,New Delhi|Table booking|3|false,151,3.67
+New Delhi,Table booking,3,Offered,New Delhi|Table booking|3|true,376,3.56
+New Delhi,Table booking,4,Not offered,New Delhi|Table booking|4|false,40,3.79
+New Delhi,Table booking,4,Offered,New Delhi|Table booking|4|true,170,3.66
+Noida,Online delivery,1,Not offered,Noida|Online delivery|1|false,188,3.11
+Noida,Online delivery,1,Offered,Noida|Online delivery|1|true,98,3.15
+Noida,Online delivery,2,Not offered,Noida|Online delivery|2|false,113,3.04
+Noida,Online delivery,2,Offered,Noida|Online delivery|2|true,192,3.18
+Noida,Online delivery,3,Not offered,Noida|Online delivery|3|false,46,3.48
+Noida,Online delivery,3,Offered,Noida|Online delivery|3|true,41,3.3
+Noida,Online delivery,4,Not offered,Noida|Online delivery|4|false,14,3.09
+Noida,Table booking,1,Not offered,Noida|Table booking|1|false,286,3.12
+Noida,Table booking,2,Not offered,Noida|Table booking|2|false,280,3.12
+Noida,Table booking,2,Offered,Noida|Table booking|2|true,25,3.13
+Noida,Table booking,3,Not offered,Noida|Table booking|3|false,28,3.36
+Noida,Table booking,3,Offered,Noida|Table booking|3|true,59,3.41
+Noida,Table booking,4,Offered,Noida|Table booking|4|true,18,3.17
+Other Indian cities,Online delivery,1,Not offered,Other Indian cities|Online delivery|1|false,59,3.85
+Other Indian cities,Online delivery,2,Not offered,Other Indian cities|Online delivery|2|false,216,3.84
+Other Indian cities,Online delivery,2,Offered,Other Indian cities|Online delivery|2|true,46,4.14
+Other Indian cities,Online delivery,3,Not offered,Other Indian cities|Online delivery|3|false,252,3.94
+Other Indian cities,Online delivery,3,Offered,Other Indian cities|Online delivery|3|true,43,4.22
+Other Indian cities,Online delivery,4,Not offered,Other Indian cities|Online delivery|4|false,78,4.03
+Other Indian cities,Table booking,1,Not offered,Other Indian cities|Table booking|1|false,65,3.88
+Other Indian cities,Table booking,2,Not offered,Other Indian cities|Table booking|2|false,248,3.87
+Other Indian cities,Table booking,2,Offered,Other Indian cities|Table booking|2|true,14,4.2
+Other Indian cities,Table booking,3,Not offered,Other Indian cities|Table booking|3|false,250,3.95
+Other Indian cities,Table booking,3,Offered,Other Indian cities|Table booking|3|true,45,4.16
+Other Indian cities,Table booking,4,Not offered,Other Indian cities|Table booking|4|false,80,4.04
+Outside India,Online delivery,1,Not offered,Outside India|Online delivery|1|false,148,3.98
+Outside India,Online delivery,2,Not offered,Outside India|Online delivery|2|false,244,4.0
+Outside India,Online delivery,3,Not offered,Outside India|Online delivery|3|false,282,4.14
+Outside India,Online delivery,3,Offered,Outside India|Online delivery|3|true,13,4.16
+Outside India,Online delivery,4,Not offered,Outside India|Online delivery|4|false,188,4.19
+Outside India,Online delivery,4,Offered,Outside India|Online delivery|4|true,10,4.11
+Outside India,Table booking,1,Not offered,Outside India|Table booking|1|false,148,3.98
+Outside India,Table booking,2,Not offered,Outside India|Table booking|2|false,245,4.0
+Outside India,Table booking,3,Not offered,Outside India|Table booking|3|false,275,4.12
+Outside India,Table booking,3,Offered,Outside India|Table booking|3|true,20,4.4
+Outside India,Table booking,4,Not offered,Outside India|Table booking|4|false,175,4.15
+Outside India,Table booking,4,Offered,Outside India|Table booking|4|true,23,4.52

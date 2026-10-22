@@ -1,0 +1,642 @@
+<style>
+  .zr { display: grid; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); }
+  .zr-head { display: grid; gap: var(--cds-gap-sm); }
+  .zr-head h1 { margin: 0; font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); text-wrap: balance; }
+  .zr-take { margin: 0; max-width: 70ch; color: var(--color-fg); font-size: var(--cds-font-size-body); line-height: 1.5; }
+  .zr-take b { font-weight: 600; }
+  .zr-controls { display: flex; flex-wrap: wrap; align-items: center; gap: var(--cds-gap-sm); }
+  .zr-controls label { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .zr-controls select { font: inherit; padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-panel); color: var(--color-fg); }
+  .zr-kpis { display: grid; gap: var(--cds-gap-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); }
+  .zr-kpi { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md) var(--cds-pad-lg); display: grid; gap: var(--cds-gap-xs); }
+  .zr-kpi span { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .zr-kpi strong { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; }
+  .zr-section { display: grid; gap: var(--cds-gap-md); }
+  .zr-section > h2 { margin: 0; font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); text-wrap: balance; }
+  .zr-section > p { margin: 0; max-width: 70ch; color: var(--color-fg-muted); font-size: var(--cds-font-size-body); line-height: 1.5; }
+  .zr-grid { display: grid; gap: var(--cds-gap-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
+  .zr-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: grid; gap: var(--cds-gap-sm); align-content: start; min-width: 0; }
+  .zr-card h3 { margin: 0; font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); }
+  .zr-note { margin: 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); line-height: 1.45; }
+  .zr-chart { position: relative; min-height: 260px; }
+  .zr-chart.zr-tall { min-height: 420px; }
+  .zr-chart svg { display: block; overflow: visible; }
+  .zr-chart text { fill: var(--color-fg-muted); font-size: var(--cds-font-size-caption); font-family: var(--font-anthropic-sans); }
+  .zr-chart text.zr-strong { fill: var(--color-fg); }
+  .zr-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); line-height: 1.45; max-width: 16rem; z-index: 2; }
+  .zr-tip .zr-tip-head { color: var(--cds-text-secondary); }
+  .zr-legend { display: flex; flex-wrap: wrap; align-items: center; gap: var(--cds-gap-md); color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .zr-legend i { display: inline-block; width: 0.625rem; height: 0.625rem; border-radius: 50%; vertical-align: -1px; margin-right: var(--cds-gap-xs); }
+  .zr-ramp { display: inline-flex; align-items: center; gap: var(--cds-gap-xs); }
+  .zr-ramp b { display: inline-block; width: 7rem; height: 0.5rem; border-radius: 0.25rem; font-weight: 400; }
+  .zr-tablebox { max-height: 26rem; overflow: auto; }
+  .zr-table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+  .zr-table th, .zr-table td { padding: var(--cds-pad-xs) var(--cds-pad-sm); text-align: right; border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+  .zr-table th:first-child, .zr-table td:first-child { text-align: left; white-space: normal; }
+  .zr-table th { position: sticky; top: 0; background: var(--color-panel); color: var(--color-fg-muted); font-weight: var(--cds-font-weight-medium); }
+  .zr-table th button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+  .zr-table th button:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+  .zr-search { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); max-width: 18rem; }
+  .zr-empty-msg { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .zr-fail { display: flex; align-items: center; justify-content: center; gap: var(--cds-gap-xs); min-height: inherit; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .zr-fail::before { content: ""; width: 0.375rem; height: 0.375rem; border-radius: 50%; background: var(--color-bad); }
+  .zr-method { margin: 0; padding-left: 1.1rem; display: grid; gap: var(--cds-gap-xs); color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); line-height: 1.5; max-width: 80ch; }
+  [data-dash-source-state=empty] { color: transparent; }
+  [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+</style>
+
+<div class="zr">
+  <header class="zr-head" id="top">
+    <h1>Zomato pricing and ratings</h1>
+    <p class="zr-take" id="takeaway">In <b class="zr-region-name">—</b>, <b data-source="takeaway" data-field="budget_share" class="zr-t-budget">—</b> of rated budget (tier 1) restaurants reach 4.0+, against <b data-source="takeaway" data-field="best_share" class="zr-t-best">—</b> at tier <b data-source="takeaway" data-field="best_tier" class="zr-t-tier">—</b>, the tier with the best odds of a high rating.</p>
+    <div class="zr-controls">
+      <label for="zr-region">Region</label>
+      <select id="zr-region" data-source="regions"></select>
+    </div>
+  </header>
+
+  <div class="zr-kpis" id="kpis">
+    <div class="zr-kpi"><span>Restaurants</span><strong data-source="region_summary" data-field="restaurants">—</strong></div>
+    <div class="zr-kpi"><span>Have a rating</span><strong data-source="region_summary" data-field="share_rated">—</strong></div>
+    <div class="zr-kpi"><span>Average rating (of 5)</span><strong data-source="region_summary" data-field="avg_rating">—</strong></div>
+    <div class="zr-kpi"><span>Rated 4.0 or higher</span><strong data-source="region_summary" data-field="share_high_rated">—</strong></div>
+  </div>
+
+  <section class="zr-section" id="pricing">
+    <h2>Which price tier gives a new restaurant the best chance of a high rating?</h2>
+    <p>Zomato puts every restaurant in a price tier from 1 (cheapest) to 4 within its own market, so tiers compare across countries even though costs do not. A high rating is 4.0 or more, Zomato's "Very Good" and "Excellent".</p>
+    <div class="zr-grid">
+      <div class="zr-card" id="tier-odds">
+        <h3>Share of rated restaurants at 4.0+, by price tier</h3>
+        <p class="zr-note">Whiskers show the 95% range for that share. Labels give the typical cost for two where the region uses one currency.</p>
+        <div class="zr-chart" id="chart-tier" data-source="price_tier"></div>
+      </div>
+      <div class="zr-card" id="tier-crowding">
+        <h3>How crowded each tier is, and how many go unrated</h3>
+        <p class="zr-note">Bars are each tier's share of the region's restaurants. The dot is the share with no rating yet, a sign of low traffic.</p>
+        <div class="zr-chart" id="chart-crowd" data-source="price_tier"></div>
+        <div class="zr-legend"><span><i class="zr-sw-a"></i>Share of restaurants</span><span><i class="zr-sw-b"></i>Not yet rated</span></div>
+      </div>
+    </div>
+    <div class="zr-card" id="tier-table-card">
+      <h3>Price tiers in detail</h3>
+      <div class="zr-tablebox">
+        <table class="zr-table" id="tier-table" data-source="price_tier" data-row-key="region,price_range">
+          <thead><tr>
+            <th data-field="price_range">Price tier</th>
+            <th data-field="median_cost_for_two">Typical cost for two</th>
+            <th data-field="restaurants">Restaurants</th>
+            <th data-field="share_of_restaurants">Share of region</th>
+            <th data-field="share_unrated">Not rated</th>
+            <th data-field="avg_rating">Average rating</th>
+            <th data-field="share_high_rated">Rated 4.0+</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="zr-section" id="where">
+    <h2>Where are the highly rated restaurants?</h2>
+    <p>Each dot is a restaurant, darker for a higher rating. "All" and "Outside India" show one bubble per city, sized by its number of restaurants. Hover for details.</p>
+    <div class="zr-card" id="map-card">
+      <div class="zr-chart zr-tall" id="chart-map" data-source="map_points map_cities basemap"></div>
+      <div class="zr-legend"><span class="zr-ramp">2.5 <b class="zr-ramp-bar"></b> 4.5+</span><span><i class="zr-sw-unrated"></i>Not rated</span></div>
+      <p class="zr-note">Restaurants whose coordinates are missing or more than about 50 km from their city's center are left off the map.</p>
+    </div>
+  </section>
+
+  <section class="zr-section" id="concept">
+    <h2>Which cuisine and price combinations rate best?</h2>
+    <p>The region's 12 most common cuisines. A restaurant listing several cuisines counts under each. Cells with fewer than 10 rated restaurants are left blank.</p>
+    <div class="zr-card" id="heat-card">
+      <h3>Share rated 4.0+, by cuisine and price tier</h3>
+      <div class="zr-chart" id="chart-heat" data-source="cuisine_price"></div>
+    </div>
+  </section>
+
+  <section class="zr-section" id="localities">
+    <h2>Which neighbourhoods are strongest, and how crowded are they?</h2>
+    <p>Localities with at least 20 restaurants. A high share of upscale (tier 3 and 4) restaurants alongside a high rating points to a market that already pays for quality.</p>
+    <div class="zr-card" id="locality-card">
+      <input class="zr-search" id="zr-loc-search" type="search" placeholder="Search localities" aria-label="Search localities">
+      <p class="zr-empty-msg" id="zr-loc-empty" hidden>Pick a region other than "All" to compare its localities.</p>
+      <div class="zr-tablebox">
+        <table class="zr-table" id="locality-table" data-source="locality" data-row-key="region,locality_key">
+          <thead><tr>
+            <th data-field="locality_key"><button type="button" data-sort="locality_key">Locality</button></th>
+            <th data-field="restaurants"><button type="button" data-sort="restaurants">Restaurants</button></th>
+            <th data-field="avg_rating"><button type="button" data-sort="avg_rating">Average rating</button></th>
+            <th data-field="share_high_rated"><button type="button" data-sort="share_high_rated">Rated 4.0+</button></th>
+            <th data-field="share_upscale"><button type="button" data-sort="share_upscale">Upscale share</button></th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="zr-section" id="drivers">
+    <h2>What else goes with a high rating?</h2>
+    <p>These are associations, not causes. Popular places collect more votes and better ratings together.</p>
+    <div class="zr-grid">
+      <div class="zr-card" id="votes-card">
+        <h3>Share rated 4.0+, by number of votes</h3>
+        <p class="zr-note">Restaurants with more reviews are far more likely to rate highly.</p>
+        <div class="zr-chart" id="chart-votes" data-source="votes"></div>
+      </div>
+      <div class="zr-card" id="services-card">
+        <h3>Average rating with and without each service, by price tier</h3>
+        <p class="zr-note">Compares restaurants in the same tier, so price is held roughly constant. Groups with fewer than 10 rated restaurants are left out.</p>
+        <div class="zr-chart" id="chart-services" data-source="services"></div>
+        <div class="zr-legend"><span><i class="zr-sw-a"></i>Offered</span><span><i class="zr-sw-c"></i>Not offered</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="zr-section" id="method">
+    <h2>How to read this</h2>
+    <ul class="zr-method">
+      <li>The data is one snapshot of 9,551 Zomato listings with no dates, so it cannot show trends over time. It shows which restaurants rate well today, not what happens after a restaurant opens.</li>
+      <li>Restaurants with no rating yet (Zomato shows 0) are left out of averages and of the 4.0+ share, but counted in "Not rated".</li>
+      <li>Outside India the dataset holds only 20 to 434 restaurants per country, and they lean toward well-known, highly rated places. Treat those figures as a rough guide.</li>
+      <li>Costs are in each country's own currency, so they are shown only for regions that use one. The source labels Philippine prices "Botswana Pula".</li>
+      <li>All figures come from the SQL in the RestaurantAnalysis repository (sql/03_marts.sql), run in DuckDB.</li>
+    </ul>
+  </section>
+</div>
+
+<script>
+(() => {
+  const num = (v) => (v === null || v === undefined || v === '' ? null : Number(v));
+  const pct = d3.format('.0%');
+  const pct1 = d3.format('.1%');
+  const fmtInt = d3.format(',');
+  const fmt2 = d3.format('.2f');
+  const TIER_NAMES = { 1: 'Budget', 2: 'Mid-range', 3: 'Upscale', 4: 'Premium' };
+  const DEFAULT_REGION = 'Delhi NCR';
+  const enc = (s) => encodeURIComponent(String(s));
+  const where = (obj) => Object.entries(obj).map(([k, v]) => enc(k) + '=' + enc(v)).join('&');
+
+  // Resolve a CSS color (token or var()) to an rgb string so it can be interpolated.
+  const probe = document.createElement('span');
+  probe.style.display = 'none';
+  document.getElementById('top').appendChild(probe);
+  const resolve = (c) => { probe.style.color = c; return getComputedStyle(probe).color; };
+
+  const region = () => dash.params().region ?? DEFAULT_REGION;
+  const currencySymbol = (c) => { const m = /\(([^)]*)\)/.exec(c || ''); return m ? m[1] : ''; };
+  const costLabel = (r) => (r.median_cost_for_two == null ? '' : (currencySymbol(r.currency) + ' ' + fmtInt(r.median_cost_for_two)).trim());
+
+  // ---- Calculations readers can inspect -------------------------------------------------
+  dash.calc('region_summary', {
+    title: 'Region totals',
+    description: 'Adds up the price tier rows for each region: restaurants, the share with a rating, the average rating and the share rated 4.0 or more.',
+    inputs: ['price_tier'],
+    fn: (price_tier) => {
+      const groups = d3.group(price_tier, (r) => r.region);
+      return Array.from(groups, ([region, rows]) => {
+        const restaurants = d3.sum(rows, (r) => +r.restaurants);
+        const rated = d3.sum(rows, (r) => +r.rated);
+        const high = d3.sum(rows, (r) => +r.high_rated);
+        const ratingSum = d3.sum(rows, (r) => +r.avg_rating * +r.rated);
+        return { region, restaurants, share_rated: rated / restaurants, avg_rating: Math.round((ratingSum / rated) * 100) / 100, share_high_rated: high / rated };
+      });
+    },
+  });
+
+  dash.calc('takeaway', {
+    title: 'Best price tier per region',
+    description: 'For each region, the share of rated tier 1 restaurants at 4.0+, and the tier (with at least 30 rated restaurants) whose share at 4.0+ is highest.',
+    inputs: ['price_tier'],
+    fn: (price_tier) => {
+      const groups = d3.group(price_tier, (r) => r.region);
+      return Array.from(groups, ([region, rows]) => {
+        const budget = rows.find((r) => +r.price_range === 1);
+        const eligible = rows.filter((r) => +r.rated >= 30);
+        const best = d3.greatest(eligible, (r) => +r.share_high_rated);
+        return {
+          region,
+          budget_share: budget ? +budget.share_high_rated : null,
+          best_tier: best ? +best.price_range : null,
+          best_share: best ? +best.share_high_rated : null,
+        };
+      });
+    },
+  });
+
+  // ---- Small helpers ----------------------------------------------------------------------
+  function makeTip(box) {
+    let tip = box.querySelector('.zr-tip');
+    if (!tip) { tip = document.createElement('div'); tip.className = 'zr-tip'; tip.hidden = true; box.appendChild(tip); }
+    return {
+      show(event, head, lines) {
+        tip.replaceChildren();
+        const h = document.createElement('div'); h.className = 'zr-tip-head'; h.textContent = head; tip.appendChild(h);
+        for (const l of lines) { const d = document.createElement('div'); d.textContent = l; tip.appendChild(d); }
+        tip.hidden = false;
+        const b = box.getBoundingClientRect();
+        let x = event.clientX - b.left + 12, y = event.clientY - b.top + 12;
+        const w = tip.offsetWidth, hgt = tip.offsetHeight;
+        if (x + w > b.width) x = Math.max(0, event.clientX - b.left - w - 12);
+        if (y + hgt > b.height) y = Math.max(0, event.clientY - b.top - hgt - 12);
+        tip.style.left = x + 'px'; tip.style.top = y + 'px';
+      },
+      hide() { tip.hidden = true; },
+    };
+  }
+
+  function setState(box, statuses) {
+    const failed = statuses.some((s) => s === 'error');
+    const ready = statuses.every((s) => s === 'ok');
+    box.classList.toggle('dash-skeleton', !ready && !failed);
+    if (!ready) {
+      box.replaceChildren();
+      if (failed) { const f = document.createElement('div'); f.className = 'zr-fail'; f.textContent = 'Failed to load'; box.appendChild(f); }
+    }
+    return ready;
+  }
+
+  function freshSvg(box, height) {
+    const width = Math.max(260, box.clientWidth);
+    box.querySelectorAll('svg, .zr-empty-msg').forEach((n) => n.remove());
+    const svg = d3.select(box).insert('svg', ':first-child').attr('width', '100%').attr('viewBox', `0 0 ${width} ${height}`).attr('height', height);
+    return { svg, width };
+  }
+
+  function emptyNote(box, text) {
+    const p = document.createElement('p'); p.className = 'zr-empty-msg'; p.textContent = text; box.appendChild(p);
+  }
+
+  function measure(svg, texts) {
+    const t = svg.append('text').attr('class', 'zr-measure');
+    let max = 0;
+    for (const s of texts) { t.text(s); max = Math.max(max, t.node().getComputedTextLength()); }
+    t.remove();
+    return max;
+  }
+
+  // ---- Region control ---------------------------------------------------------------------
+  const sel = document.getElementById('zr-region');
+  sel.addEventListener('change', () => dash.setParams({ region: sel.value }));
+
+  // ---- Charts -----------------------------------------------------------------------------
+  function drawTierOdds(rows, colors) {
+    const box = document.getElementById('chart-tier');
+    const tip = makeTip(box);
+    const height = 260;
+    const { svg, width } = freshSvg(box, height);
+    if (!rows.length) { emptyNote(box, 'No rated restaurants in this region.'); return; }
+    const m = { top: 24, right: 8, bottom: 44, left: 40 };
+    const x = d3.scaleBand(rows.map((r) => r.price_range), [m.left, width - m.right]).padding(0.35);
+    const yMax = Math.max(0.1, d3.max(rows, (r) => r.share_high_high));
+    const y = d3.scaleLinear([0, yMax], [height - m.bottom, m.top]).nice();
+    svg.append('g').selectAll('line').data(y.ticks(4)).join('line')
+      .attr('x1', m.left).attr('x2', width - m.right).attr('y1', (d) => y(d)).attr('y2', (d) => y(d))
+      .style('stroke', 'var(--cds-chart-grid)');
+    svg.append('g').selectAll('text').data(y.ticks(4)).join('text')
+      .attr('x', m.left - 6).attr('y', (d) => y(d)).attr('dy', '0.32em').attr('text-anchor', 'end').text((d) => pct(d));
+    const bw = Math.min(32, x.bandwidth());
+    const g = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (r) => `translate(${x(r.price_range) + x.bandwidth() / 2},0)`);
+    g.append('path')
+      .attr('d', (r) => {
+        const top = y(r.share_high_rated), base = y(0), rr = Math.min(4, (base - top) / 2), hw = bw / 2;
+        return `M${-hw},${base}V${top + rr}Q${-hw},${top} ${-hw + rr},${top}H${hw - rr}Q${hw},${top} ${hw},${top + rr}V${base}Z`;
+      })
+      .style('fill', colors[0]);
+    g.append('line').attr('y1', (r) => y(r.share_high_low)).attr('y2', (r) => y(r.share_high_high)).style('stroke', 'var(--color-fg)').attr('stroke-width', 1.5);
+    g.selectAll('.cap').data((r) => [r.share_high_low, r.share_high_high]).join('line').attr('class', 'cap')
+      .attr('x1', -5).attr('x2', 5).attr('y1', (v) => y(v)).attr('y2', (v) => y(v)).style('stroke', 'var(--color-fg)').attr('stroke-width', 1.5);
+    g.append('text').attr('class', 'zr-strong').attr('text-anchor', 'middle').attr('y', (r) => y(r.share_high_high) - 6).text((r) => pct(r.share_high_rated));
+    g.append('text').attr('class', 'zr-strong').attr('text-anchor', 'middle').attr('y', height - m.bottom + 16).text((r) => `${r.price_range} · ${TIER_NAMES[r.price_range]}`);
+    g.append('text').attr('text-anchor', 'middle').attr('y', height - m.bottom + 32).text((r) => costLabel(r));
+    g.append('rect').attr('x', -x.bandwidth() / 2).attr('width', x.bandwidth()).attr('y', m.top).attr('height', height - m.top - m.bottom).style('fill', 'transparent')
+      .on('mousemove', (event, r) => tip.show(event, `Tier ${r.price_range} · ${TIER_NAMES[r.price_range]}`, [
+        `${pct1(r.share_high_rated)} rated 4.0+ (${pct1(r.share_high_low)} to ${pct1(r.share_high_high)})`,
+        `${fmtInt(r.high_rated)} of ${fmtInt(r.rated)} rated restaurants`,
+        `Average rating ${fmt2(r.avg_rating)}`,
+      ]))
+      .on('mouseleave', () => tip.hide());
+  }
+
+  function drawCrowding(rows, colors) {
+    const box = document.getElementById('chart-crowd');
+    const tip = makeTip(box);
+    const height = 260;
+    const { svg, width } = freshSvg(box, height);
+    if (!rows.length) { emptyNote(box, 'No rated restaurants in this region.'); return; }
+    const m = { top: 24, right: 8, bottom: 28, left: 40 };
+    const x = d3.scaleBand(rows.map((r) => r.price_range), [m.left, width - m.right]).padding(0.35);
+    const yMax = Math.max(d3.max(rows, (r) => r.share_of_restaurants), d3.max(rows, (r) => r.share_unrated));
+    const y = d3.scaleLinear([0, yMax], [height - m.bottom, m.top]).nice();
+    svg.append('g').selectAll('line').data(y.ticks(4)).join('line')
+      .attr('x1', m.left).attr('x2', width - m.right).attr('y1', (d) => y(d)).attr('y2', (d) => y(d)).style('stroke', 'var(--cds-chart-grid)');
+    svg.append('g').selectAll('text').data(y.ticks(4)).join('text')
+      .attr('x', m.left - 6).attr('y', (d) => y(d)).attr('dy', '0.32em').attr('text-anchor', 'end').text((d) => pct(d));
+    const bw = Math.min(32, x.bandwidth());
+    const g = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (r) => `translate(${x(r.price_range) + x.bandwidth() / 2},0)`);
+    g.append('rect').attr('x', -bw / 2).attr('width', bw).attr('y', (r) => y(r.share_of_restaurants)).attr('height', (r) => y(0) - y(r.share_of_restaurants)).attr('rx', 4).style('fill', colors[0]);
+    g.append('circle').attr('r', 5).attr('cy', (r) => y(r.share_unrated)).style('fill', colors[2]).style('stroke', 'var(--color-panel)').attr('stroke-width', 2);
+    g.append('text').attr('class', 'zr-strong').attr('text-anchor', 'middle').attr('y', height - m.bottom + 16).text((r) => `${r.price_range} · ${TIER_NAMES[r.price_range]}`);
+    g.append('rect').attr('x', -x.bandwidth() / 2).attr('width', x.bandwidth()).attr('y', m.top).attr('height', height - m.top - m.bottom).style('fill', 'transparent')
+      .on('mousemove', (event, r) => tip.show(event, `Tier ${r.price_range} · ${TIER_NAMES[r.price_range]}`, [
+        `${fmtInt(r.restaurants)} restaurants, ${pct1(r.share_of_restaurants)} of the region`,
+        `${pct1(r.share_unrated)} not yet rated`,
+      ]))
+      .on('mouseleave', () => tip.hide());
+  }
+
+  function drawTierTable(rows) {
+    const tbody = document.querySelector('#tier-table tbody');
+    tbody.replaceChildren();
+    for (const r of rows) {
+      const tr = document.createElement('tr');
+      tr.dataset.key = enc(r.region) + ',' + enc(r.price_range);
+      const cells = [
+        String(r.price_range),
+        costLabel(r) || 'Mixed currencies',
+        fmtInt(r.restaurants), pct1(r.share_of_restaurants), pct1(r.share_unrated), fmt2(r.avg_rating), pct1(r.share_high_rated),
+      ];
+      for (const c of cells) { const td = document.createElement('td'); td.textContent = c; tr.appendChild(td); }
+      tbody.appendChild(tr);
+    }
+  }
+
+  // Map: hand-rolled Web Mercator so no map library is needed.
+  const merc = ([lon, lat]) => [lon * Math.PI / 180, Math.log(Math.tan(Math.PI / 4 + Math.max(-85, Math.min(85, lat)) * Math.PI / 360))];
+
+  function drawMap(points, cities, land, reg, ramp, colors) {
+    const box = document.getElementById('chart-map');
+    const tip = makeTip(box);
+    const width = Math.max(260, box.clientWidth);
+    const worldView = reg === 'All' || reg === 'Outside India';
+    let items;
+    if (worldView) {
+      items = cities.filter((c) => reg === 'All' || c.country !== 'India')
+        .map((c) => ({ ...c, lon: c.longitude, lat: c.latitude }));
+    } else {
+      items = points.filter((p) => p.regions.split('|').includes(reg))
+        .map((p) => ({ ...p, lon: p.longitude, lat: p.latitude }));
+    }
+    const bounds = worldView ? [[-160, -48], [178, 66]] : [[d3.min(items, (d) => d.lon), d3.min(items, (d) => d.lat)], [d3.max(items, (d) => d.lon), d3.max(items, (d) => d.lat)]];
+    const [x0, y0] = merc(bounds[0]), [x1, y1] = merc(bounds[1]);
+    const pad = 16;
+    const spanX = Math.max(x1 - x0, 1e-4), spanY = Math.max(y1 - y0, 1e-4);
+    let height = Math.round(Math.min(560, Math.max(320, width * (spanY / spanX))));
+    const k = Math.min((width - 2 * pad) / spanX, (height - 2 * pad) / spanY);
+    const ox = (width - k * spanX) / 2, oy = (height - k * spanY) / 2;
+    const proj = (lon, lat) => { const [mx, my] = merc([lon, lat]); return [ox + (mx - x0) * k, height - oy - (my - y0) * k]; };
+
+    const { svg } = freshSvg(box, height);
+    const path = land.map((r) => {
+      const ring = typeof r.ring === 'string' ? JSON.parse(r.ring) : r.ring;
+      return 'M' + ring.map(([lon, lat]) => proj(lon, lat).map((v) => v.toFixed(1)).join(',')).join('L') + 'Z';
+    }).join('');
+    svg.append('path').attr('d', path).style('fill', 'var(--cds-chart-grid)').style('stroke', 'var(--color-border-line)').attr('stroke-width', 0.5);
+
+    const unrated = resolve('var(--cds-chart-muted)');
+    const colorOf = (rating) => (rating == null ? unrated : ramp(rating));
+    for (const d of items) { [d.px, d.py] = proj(d.lon, d.lat); }
+    if (worldView) {
+      const r = d3.scaleSqrt([0, d3.max(items, (d) => d.restaurants)], [0, Math.min(40, width / 20)]);
+      const sorted = items.slice().sort((a, b) => b.restaurants - a.restaurants);
+      svg.append('g').selectAll('circle').data(sorted).join('circle')
+        .attr('cx', (d) => d.px).attr('cy', (d) => d.py).attr('r', (d) => Math.max(3, r(d.restaurants)))
+        .style('fill', (d) => colorOf(d.avg_rating)).attr('fill-opacity', 0.85).style('stroke', 'var(--color-panel)').attr('stroke-width', 1);
+    } else {
+      const sorted = items.slice().sort((a, b) => (a.rating ?? 0) - (b.rating ?? 0));
+      const rad = items.length > 2000 ? 2.2 : 3.2;
+      svg.append('g').selectAll('circle').data(sorted).join('circle')
+        .attr('cx', (d) => d.px).attr('cy', (d) => d.py).attr('r', (d) => (d.rating == null ? rad * 0.7 : rad))
+        .style('fill', (d) => colorOf(d.rating)).attr('fill-opacity', (d) => (d.rating == null ? 0.6 : 0.9));
+    }
+    const delaunay = d3.Delaunay.from(items, (d) => d.px, (d) => d.py);
+    const ring = svg.append('circle').style('fill', 'none').style('stroke', 'var(--color-fg)').attr('stroke-width', 1.5).attr('visibility', 'hidden');
+    svg.append('rect').attr('width', width).attr('height', height).style('fill', 'transparent')
+      .on('mousemove', (event) => {
+        const [mx, my] = d3.pointer(event);
+        const i = delaunay.find(mx, my);
+        const d = items[i];
+        if (!d || Math.hypot(d.px - mx, d.py - my) > 30) { tip.hide(); ring.attr('visibility', 'hidden'); return; }
+        ring.attr('cx', d.px).attr('cy', d.py).attr('r', worldView ? 8 : 6).attr('visibility', 'visible');
+        if (worldView) tip.show(event, `${d.city}, ${d.country}`, [`${fmtInt(d.restaurants)} restaurants`, d.avg_rating == null ? 'None rated' : `Average rating ${fmt2(d.avg_rating)}`]);
+        else tip.show(event, d.restaurant_name, [`${d.locality}, ${d.city}`, d.rating == null ? 'Not rated' : `Rating ${fmt2(d.rating)} from ${fmtInt(d.votes)} votes`, `Price tier ${d.price_range} · ${TIER_NAMES[d.price_range]}`]);
+      })
+      .on('mouseleave', () => { tip.hide(); ring.attr('visibility', 'hidden'); });
+  }
+
+  function drawHeat(rows, ramp) {
+    const box = document.getElementById('chart-heat');
+    const tip = makeTip(box);
+    if (!rows.length) { freshSvg(box, 40); emptyNote(box, 'Not enough rated restaurants to compare cuisines here.'); return; }
+    const totals = d3.rollup(rows, (v) => d3.sum(v, (r) => r.rated), (r) => r.cuisine);
+    const cuisines = Array.from(totals.keys()).sort((a, b) => totals.get(b) - totals.get(a));
+    const tiers = [1, 2, 3, 4];
+    const rowH = 28;
+    const height = cuisines.length * rowH + 40;
+    const { svg, width } = freshSvg(box, height);
+    const left = Math.ceil(measure(svg, cuisines)) + 12;
+    const x = d3.scaleBand(tiers, [left, width - 4]).paddingInner(0.06);
+    const y = d3.scaleBand(cuisines, [24, height - 16]).paddingInner(0.1);
+    const maxShare = Math.max(0.2, d3.max(rows, (r) => r.share_high_rated));
+    const fill = (v) => ramp.share(v / maxShare);
+    svg.append('g').selectAll('text').data(tiers).join('text').attr('class', 'zr-strong')
+      .attr('x', (t) => x(t) + x.bandwidth() / 2).attr('y', 14).attr('text-anchor', 'middle').text((t) => `${t} · ${TIER_NAMES[t]}`);
+    svg.append('g').selectAll('text').data(cuisines).join('text').attr('class', 'zr-strong')
+      .attr('x', left - 8).attr('y', (c) => y(c) + y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'end').text((c) => c);
+    const cells = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (r) => `translate(${x(r.price_range)},${y(r.cuisine)})`);
+    cells.append('rect').attr('width', x.bandwidth()).attr('height', y.bandwidth()).attr('rx', 4).style('fill', (r) => fill(r.share_high_rated));
+    cells.append('text').attr('x', x.bandwidth() / 2).attr('y', y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'middle')
+      .style('fill', (r) => (r.share_high_rated / maxShare > 0.55 ? 'var(--color-bg)' : 'var(--color-fg)')).text((r) => pct(r.share_high_rated));
+    cells.on('mousemove', (event, r) => tip.show(event, `${r.cuisine} · tier ${r.price_range}`, [`${pct1(r.share_high_rated)} rated 4.0+`, `Average rating ${fmt2(r.avg_rating)}`, `${fmtInt(r.rated)} rated restaurants`]))
+      .on('mouseleave', () => tip.hide());
+  }
+
+  let locSort = { key: 'avg_rating', dir: -1 };
+  function drawLocalities(rows, reg) {
+    const tbody = document.querySelector('#locality-table tbody');
+    const empty = document.getElementById('zr-loc-empty');
+    empty.hidden = reg !== 'All';
+    const q = document.getElementById('zr-loc-search').value.trim().toLowerCase();
+    const shown = rows.filter((r) => !q || r.locality_key.toLowerCase().includes(q))
+      .sort((a, b) => {
+        const av = a[locSort.key], bv = b[locSort.key];
+        if (typeof av === 'string') return locSort.dir * av.localeCompare(bv);
+        return locSort.dir * ((av ?? -1) - (bv ?? -1));
+      });
+    tbody.replaceChildren();
+    for (const r of shown) {
+      const tr = document.createElement('tr');
+      tr.dataset.key = enc(r.region) + ',' + enc(r.locality_key);
+      const cells = [r.locality_key, fmtInt(r.restaurants), r.avg_rating == null ? '' : fmt2(r.avg_rating), r.share_high_rated == null ? '' : pct1(r.share_high_rated), pct1(r.share_upscale)];
+      for (const c of cells) { const td = document.createElement('td'); td.textContent = c; tr.appendChild(td); }
+      tbody.appendChild(tr);
+    }
+    document.querySelectorAll('#locality-table th').forEach((th) => {
+      const b = th.querySelector('button');
+      th.setAttribute('aria-sort', b.dataset.sort === locSort.key ? (locSort.dir > 0 ? 'ascending' : 'descending') : 'none');
+    });
+  }
+  document.querySelectorAll('#locality-table th button').forEach((b) => b.addEventListener('click', () => {
+    const key = b.dataset.sort;
+    locSort = { key, dir: locSort.key === key ? -locSort.dir : (key === 'locality_key' ? 1 : -1) };
+    render();
+  }));
+  document.getElementById('zr-loc-search').addEventListener('input', () => render());
+
+  function drawVotes(rows, colors) {
+    const box = document.getElementById('chart-votes');
+    const tip = makeTip(box);
+    const height = 240;
+    const { svg, width } = freshSvg(box, height);
+    if (!rows.length) { emptyNote(box, 'No rated restaurants in this region.'); return; }
+    const m = { top: 24, right: 8, bottom: 30, left: 40 };
+    const x = d3.scaleBand(rows.map((r) => r.vote_band), [m.left, width - m.right]).padding(0.35);
+    const y = d3.scaleLinear([0, Math.max(0.1, d3.max(rows, (r) => r.share_high_rated))], [height - m.bottom, m.top]).nice();
+    svg.append('g').selectAll('line').data(y.ticks(4)).join('line')
+      .attr('x1', m.left).attr('x2', width - m.right).attr('y1', (d) => y(d)).attr('y2', (d) => y(d)).style('stroke', 'var(--cds-chart-grid)');
+    svg.append('g').selectAll('text').data(y.ticks(4)).join('text')
+      .attr('x', m.left - 6).attr('y', (d) => y(d)).attr('dy', '0.32em').attr('text-anchor', 'end').text((d) => pct(d));
+    const bw = Math.min(32, x.bandwidth());
+    const g = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (r) => `translate(${x(r.vote_band) + x.bandwidth() / 2},0)`);
+    g.append('rect').attr('x', -bw / 2).attr('width', bw).attr('y', (r) => y(r.share_high_rated)).attr('height', (r) => y(0) - y(r.share_high_rated)).attr('rx', 4).style('fill', colors[0]);
+    g.append('text').attr('class', 'zr-strong').attr('text-anchor', 'middle').attr('y', (r) => y(r.share_high_rated) - 6).text((r) => pct(r.share_high_rated));
+    g.append('text').attr('text-anchor', 'middle').attr('y', height - m.bottom + 16).text((r) => r.vote_band);
+    g.append('rect').attr('x', -x.bandwidth() / 2).attr('width', x.bandwidth()).attr('y', m.top).attr('height', height - m.top - m.bottom).style('fill', 'transparent')
+      .on('mousemove', (event, r) => tip.show(event, `${r.vote_band} votes`, [`${pct1(r.share_high_rated)} rated 4.0+`, `Average rating ${fmt2(r.avg_rating)}`, `${fmtInt(r.rated)} rated restaurants`]))
+      .on('mouseleave', () => tip.hide());
+  }
+
+  function drawServices(rows, colors) {
+    const box = document.getElementById('chart-services');
+    const tip = makeTip(box);
+    const services = ['Table booking', 'Online delivery'];
+    const height = 240;
+    const { svg, width } = freshSvg(box, height);
+    if (!rows.length) { emptyNote(box, 'Not enough rated restaurants to compare.'); return; }
+    const m = { top: 28, right: 8, bottom: 30, left: 34 };
+    const outer = d3.scaleBand(services, [m.left, width - m.right]).paddingInner(0.12);
+    const y = d3.scaleLinear(d3.extent(rows, (r) => r.avg_rating), [height - m.bottom, m.top]).nice();
+    svg.append('g').selectAll('line').data(y.ticks(4)).join('line')
+      .attr('x1', m.left).attr('x2', width - m.right).attr('y1', (d) => y(d)).attr('y2', (d) => y(d)).style('stroke', 'var(--cds-chart-grid)');
+    svg.append('g').selectAll('text').data(y.ticks(4)).join('text')
+      .attr('x', m.left - 6).attr('y', (d) => y(d)).attr('dy', '0.32em').attr('text-anchor', 'end').text((d) => d3.format('.1f')(d));
+    for (const s of services) {
+      const g = svg.append('g');
+      const x = d3.scalePoint([1, 2, 3, 4], [outer(s), outer(s) + outer.bandwidth()]).padding(0.5);
+      g.append('text').attr('class', 'zr-strong').attr('x', outer(s) + outer.bandwidth() / 2).attr('y', 12).attr('text-anchor', 'middle').text(s);
+      g.selectAll('.tier').data([1, 2, 3, 4]).join('text').attr('class', 'tier').attr('x', (t) => x(t)).attr('y', height - m.bottom + 16).attr('text-anchor', 'middle').text((t) => `Tier ${t}`);
+      const sub = rows.filter((r) => r.service === s);
+      const byTier = d3.group(sub, (r) => r.price_range);
+      for (const [t, pair] of byTier) {
+        const yes = pair.find((r) => r.offered === 'Offered'), no = pair.find((r) => r.offered === 'Not offered');
+        if (yes && no) g.append('line').attr('x1', x(t)).attr('x2', x(t)).attr('y1', y(yes.avg_rating)).attr('y2', y(no.avg_rating)).style('stroke', 'var(--cds-chart-axis)').attr('stroke-width', 2);
+      }
+      g.selectAll('circle').data(sub).join('circle')
+        .attr('cx', (r) => x(r.price_range)).attr('cy', (r) => y(r.avg_rating)).attr('r', 5)
+        .style('fill', (r) => (r.offered === 'Offered' ? colors[0] : colors[3])).style('stroke', 'var(--color-panel)').attr('stroke-width', 2)
+        .on('mousemove', (event, r) => tip.show(event, `${s} · tier ${r.price_range}`, [`${r.offered}: average rating ${fmt2(r.avg_rating)}`, `${fmtInt(r.rated)} rated restaurants`]))
+        .on('mouseleave', () => tip.hide());
+    }
+  }
+
+  // ---- Render -----------------------------------------------------------------------------
+  function render() {
+    const reg = region();
+    const colors = dash.colors;
+    document.querySelectorAll('.zr-sw-a').forEach((e) => { e.style.background = colors[0]; });
+    document.querySelectorAll('.zr-sw-b').forEach((e) => { e.style.background = colors[2]; });
+    document.querySelectorAll('.zr-sw-c').forEach((e) => { e.style.background = colors[3]; });
+    document.querySelectorAll('.zr-sw-unrated').forEach((e) => { e.style.background = 'var(--cds-chart-muted)'; });
+
+    // Sequential ramp for ratings: from a faint tint of the first series color to the full color.
+    const c0 = resolve(colors[0]);
+    const base = d3.interpolateRgb(resolve('var(--color-panel)'), c0)(0.18);
+    const shareRamp = d3.interpolateRgb(base, c0);
+    const ramp = (rating) => shareRamp(Math.max(0, Math.min(1, (rating - 2.5) / 2)));
+    ramp.share = (t) => shareRamp(Math.max(0, Math.min(1, t)));
+    document.querySelectorAll('.zr-ramp-bar').forEach((e) => { e.style.background = `linear-gradient(90deg, ${shareRamp(0)}, ${shareRamp(1)})`; });
+
+    // Region select
+    const g = dash.data('regions');
+    const regionRows = g.status === 'ok' ? g.data : [];
+    sel.replaceChildren(...regionRows.map((r) => new Option(`${r.region} (${fmtInt(+r.restaurants)})`, r.region)));
+    sel.value = reg;
+    document.querySelector('.zr-region-name').textContent = reg;
+
+    // KPIs
+    const sum = dash.data('region_summary');
+    const srow = sum.status === 'ok' ? sum.data.find((r) => r.region === reg) : null;
+    document.querySelectorAll('#kpis [data-source="region_summary"]').forEach((el) => {
+      el.dataset.where = where({ region: reg });
+      const f = el.dataset.field;
+      el.classList.toggle('dash-skeleton', sum.status === 'loading');
+      if (!srow) { el.textContent = '—'; return; }
+      const v = srow[f];
+      el.textContent = f === 'restaurants' ? fmtInt(v) : f === 'avg_rating' ? fmt2(v) : pct(v);
+    });
+
+    // Takeaway
+    const tk = dash.data('takeaway');
+    const trow = tk.status === 'ok' ? tk.data.find((r) => r.region === reg) : null;
+    document.querySelectorAll('#takeaway [data-source="takeaway"]').forEach((el) => {
+      el.dataset.where = where({ region: reg });
+      const f = el.dataset.field;
+      if (!trow || trow[f] == null) { el.textContent = '—'; return; }
+      el.textContent = f === 'best_tier' ? String(trow[f]) : pct(trow[f]);
+    });
+
+    // Price tier charts and table
+    const pt = dash.data('price_tier');
+    const tierRows = pt.status === 'ok' ? pt.data.filter((r) => r.region === reg).map((r) => ({
+      region: r.region, price_range: +r.price_range, restaurants: +r.restaurants, rated: +r.rated, high_rated: +r.high_rated,
+      share_unrated: +r.share_unrated, share_of_restaurants: +r.share_of_restaurants, avg_rating: +r.avg_rating,
+      share_high_rated: +r.share_high_rated, share_high_low: +r.share_high_low, share_high_high: +r.share_high_high,
+      median_cost_for_two: num(r.median_cost_for_two), currency: r.currency || null,
+    })).sort((a, b) => a.price_range - b.price_range) : [];
+    for (const id of ['chart-tier', 'chart-crowd']) {
+      const box = document.getElementById(id);
+      if (setState(box, [pt.status])) (id === 'chart-tier' ? drawTierOdds : drawCrowding)(tierRows, colors);
+    }
+    drawTierTable(tierRows);
+
+    // Map
+    const mp = dash.data('map_points'), mc = dash.data('map_cities'), bm = dash.data('basemap');
+    const mapBox = document.getElementById('chart-map');
+    if (setState(mapBox, [mp.status, mc.status, bm.status])) {
+      const points = mp.data.map((p) => ({ restaurant_name: p.restaurant_name, city: p.city, locality: p.locality, longitude: +p.longitude, latitude: +p.latitude, rating: num(p.rating), price_range: +p.price_range, votes: +p.votes, regions: p.regions }));
+      const cities = mc.data.map((c) => ({ country: c.country, city: c.city, longitude: +c.longitude, latitude: +c.latitude, restaurants: +c.restaurants, avg_rating: num(c.avg_rating) }));
+      drawMap(points, cities, bm.data, reg, ramp, colors);
+    }
+
+    // Heatmap
+    const cp = dash.data('cuisine_price');
+    const heatBox = document.getElementById('chart-heat');
+    if (setState(heatBox, [cp.status])) {
+      drawHeat(cp.data.filter((r) => r.region === reg).map((r) => ({ cuisine: r.cuisine, price_range: +r.price_range, rated: +r.rated, avg_rating: +r.avg_rating, share_high_rated: +r.share_high_rated })), ramp);
+    }
+
+    // Localities
+    const lc = dash.data('locality');
+    drawLocalities(lc.status === 'ok' ? lc.data.filter((r) => r.region === reg).map((r) => ({
+      region: r.region, locality_key: r.locality_key, restaurants: +r.restaurants, avg_rating: num(r.avg_rating),
+      share_high_rated: num(r.share_high_rated), share_upscale: +r.share_upscale,
+    })) : [], reg);
+
+    // Drivers
+    const vt = dash.data('votes');
+    const vBox = document.getElementById('chart-votes');
+    if (setState(vBox, [vt.status])) {
+      drawVotes(vt.data.filter((r) => r.region === reg).map((r) => ({ vote_band: r.vote_band, band_order: +r.band_order, rated: +r.rated, avg_rating: +r.avg_rating, share_high_rated: +r.share_high_rated })).sort((a, b) => a.band_order - b.band_order), colors);
+    }
+    const sv = dash.data('services');
+    const sBox = document.getElementById('chart-services');
+    if (setState(sBox, [sv.status])) {
+      drawServices(sv.data.filter((r) => r.region === reg).map((r) => ({ service: r.service, price_range: +r.price_range, offered: r.offered, rated: +r.rated, avg_rating: +r.avg_rating })), colors);
+    }
+  }
+
+  dash.onData(render);
+})();
+</script>

@@ -1,0 +1,142 @@
+country,city,latitude,longitude,restaurants,avg_rating
+India,New Delhi,28.6275,77.2063,5239,3.3
+India,Gurgaon,28.4682,77.0794,1070,3.33
+India,Noida,28.5705,77.3538,986,3.16
+India,Faridabad,28.4298,77.313,229,3.1
+India,Ghaziabad,28.6341,77.3699,25,3.1
+India,Ahmedabad,23.0382,72.5281,21,4.16
+United States,Sioux City,42.4938,-96.399,20,3.77
+United States,Waterloo,42.5127,-92.4322,20,3.65
+Turkey,Ankara,39.9066,32.8445,20,4.31
+United States,Athens,33.9584,-83.3797,20,4.2
+United Arab Emirates,Sharjah,25.3268,55.3863,20,4.03
+India,Chennai,13.0372,80.2424,20,4.32
+United States,Columbus,32.5162,-84.9583,20,4.03
+United Kingdom,London,51.5126,-0.1353,20,4.53
+United States,Dubuque,42.4978,-90.6677,20,3.54
+United States,Dalton,34.7624,-84.998,20,4.11
+India,Indore,22.7453,75.8886,20,3.97
+United States,Pensacola,30.4087,-87.2086,20,4.2
+United States,Pocatello,42.8718,-112.4428,20,3.67
+India,Kochi,9.9871,76.2964,20,4.08
+India,Coimbatore,11.0095,76.9764,20,4.14
+India,Surat,21.1709,72.7899,20,3.93
+United Arab Emirates,Dubai,25.2111,55.2789,20,4.37
+New Zealand,Wellington City,-41.2934,174.7764,20,4.25
+United States,Tampa Bay,27.9333,-82.4893,20,4.41
+India,Kolkata,22.5391,88.3652,20,4.26
+Qatar,Doha,25.2788,51.5203,20,4.06
+South Africa,Cape Town,-33.9215,18.4178,20,4.11
+United Kingdom,Birmingham,52.4776,-1.8998,20,3.87
+India,Puducherry,11.9303,79.8335,20,3.73
+India,Pune,18.5449,73.8405,20,4.22
+United Kingdom,Manchester,53.481,-2.2419,20,4.05
+India,Mumbai,19.121,72.8344,20,4.08
+United Kingdom,Edinburgh,55.949,-3.1938,20,4.09
+United States,Gainesville,34.4242,-83.852,20,4.04
+South Africa,Pretoria,-25.7779,28.2639,20,4.19
+Brazil,Bras�_lia,-15.8228,-47.8988,20,3.68
+United States,Macon,32.7277,-83.6597,20,4.12
+Brazil,Rio de Janeiro,-22.9694,-43.2041,20,4.49
+Brazil,S��o Paulo,-23.5686,-46.6624,20,4.15
+United States,Albany,31.6104,-84.2106,20,3.56
+United States,Augusta,33.4787,-82.0601,20,4.13
+United States,Boise,43.6153,-116.2033,20,4.26
+United States,Davenport,41.571,-90.5377,20,4.13
+United States,Cedar Rapids/Iowa City,41.6695,-91.5692,20,4.17
+United States,Orlando,28.542,-81.3732,20,4.48
+United States,Savannah,32.079,-81.0913,20,4.16
+United States,Des Moines,41.5966,-93.6402,20,4.23
+Singapore,Singapore,1.2907,103.8547,20,3.58
+United States,Valdosta,30.843,-83.3024,20,3.72
+United Arab Emirates,Abu Dhabi,24.4854,54.3746,20,4.3
+India,Bangalore,12.9601,77.6332,20,4.38
+India,Jaipur,26.9052,75.7959,20,4.13
+New Zealand,Auckland,-36.8516,174.7635,19,4.29
+Sri Lanka,Colombo,6.9068,79.8567,19,3.85
+India,Nagpur,21.1385,79.0679,19,3.97
+India,Mysore,12.3232,76.628,19,3.72
+India,Chandigarh,30.7215,76.8007,18,4.05
+India,Ludhiana,30.8932,75.8218,18,4.01
+India,Hyderabad,17.431,78.3956,18,4.34
+India,Kanpur,26.4764,80.3208,18,3.83
+India,Amritsar,31.6357,74.8759,17,3.64
+India,Goa,15.5444,73.7667,17,4.22
+India,Lucknow,26.8528,80.99,17,4.22
+India,Patna,25.614,85.1359,17,3.45
+India,Bhubaneshwar,20.3263,85.8229,17,3.93
+India,Aurangabad,19.876,75.3434,16,3.39
+India,Ranchi,23.3591,85.3256,16,3.48
+India,Vizag,17.7262,83.3159,15,4.01
+India,Guwahati,26.1722,91.7739,15,4.17
+India,Allahabad,25.4517,81.8345,15,3.41
+Indonesia,Jakarta,-6.2033,106.8198,15,4.42
+India,Agra,27.1617,78.0416,14,4.02
+Turkey,��stanbul,41.0252,29.0244,14,4.29
+India,Bhopal,23.2325,77.4246,14,4.02
+India,Nashik,20.0067,73.7586,14,3.57
+India,Dehradun,30.3425,78.0612,13,4.11
+India,Varanasi,25.3114,82.9912,13,3.48
+India,Mangalore,12.8737,74.8516,11,3.68
+South Africa,Sandton,-26.0527,28.0277,11,4.3
+United States,Rest of Hawaii,20.8807,-156.5612,10,4.41
+India,Vadodara,22.3109,73.1678,10,4.08
+South Africa,Johannesburg,-26.1419,28.0178,6,4.2
+Philippines,Taguig City,14.5476,121.0499,4,4.53
+Philippines,Mandaluyong City,14.5841,121.0567,4,4.63
+Philippines,Pasig City,14.5709,121.0579,3,4.63
+Philippines,Pasay City,14.54,120.9797,3,4.37
+Indonesia,Tangerang,-6.2559,106.6894,2,4.3
+Australia,Hepburn Springs,-37.2939,144.1244,2,3.8
+Indonesia,Bogor,-6.5918,106.8091,2,3.85
+South Africa,Inner City,-26.2052,28.046,2,4.9
+Philippines,Makati City,14.5596,121.0208,2,4.65
+Philippines,San Juan City,14.5962,121.0359,2,4.25
+Philippines,Santa Rosa,14.2374,121.0568,2,3.8
+India,Secunderabad,17.4711,78.5262,2,4.5
+Australia,Macedon,-37.4232,144.5642,1,3.5
+Australia,Montville,-26.6905,152.8937,1,2.4
+United States,Ojo Caliente,36.3136,-106.0577,1,3.6
+Australia,Palm Cove,-16.7481,145.6708,1,4.4
+Australia,Mayfield,-32.8992,151.7344,1,2.9
+Australia,Tanunda,-34.5196,138.9661,1,4.4
+Philippines,Tagaytay City,14.1018,120.9516,1,4.5
+United States,Winchester Bay,43.679,-124.1754,1,3.2
+United States,Clatskanie,46.127,-123.3682,1,4.3
+United States,Cochrane,51.1839,-114.4725,1,3.1
+United States,Weirton,40.396,-80.5295,1,3.9
+United States,Potrero,32.6134,-116.7047,1,3.3
+Australia,Dicky Beach,-26.7836,153.1374,1,3.6
+Australia,Flaxton,-26.6521,152.8772,1,3.5
+United States,Miller,44.5158,-98.9891,1,3.4
+South Africa,Randburg,-26.1403,27.9918,1,4.3
+United States,Vernonia,45.8587,-123.1954,1,4.3
+United States,Princeton,40.3524,-74.6511,1,4.0
+Canada,Yorkton,51.2107,-102.4613,1,3.3
+India,Mohali,30.6956,76.7188,1,4.3
+Australia,Penola,-37.3792,140.8374,1,3.4
+Indonesia,Bandung,-6.8871,107.6128,1,4.2
+Australia,East Ballina,-28.8627,153.5933,1,4.1
+Australia,Inverloch,-38.6347,145.7287,1,3.7
+India,Panchkula,30.6979,76.8493,1,4.2
+Philippines,Quezon City,14.6495,121.0754,1,4.8
+United States,Mc Millan,46.3718,-85.7363,1,2.4
+Australia,Armidale,-30.5147,151.6689,1,3.5
+Australia,Balingup,-33.7845,115.9845,1,3.2
+Australia,Beechworth,-36.3604,146.6858,1,4.6
+Canada,Chatham-Kent,42.3977,-82.1884,1,3.7
+Australia,Huskisson,-35.0389,150.6711,1,4.1
+Australia,Lorn,-32.7281,151.5585,1,3.6
+United States,Monroe,42.6063,-89.6535,1,3.6
+Canada,Consort,52.0083,-110.7747,1,3.0
+Australia,Paynesville,-37.9194,147.7228,1,2.6
+United States,Fernley,39.6075,-119.2527,1,3.7
+Australia,Forrest,-38.5173,143.7143,1,3.7
+Australia,Trentham East,-37.3969,144.4127,1,4.1
+Australia,Lakes Entrance,-37.8784,147.9942,1,3.8
+Australia,Victor Harbor,-35.5537,138.6243,1,3.6
+United States,Lakeview,42.1885,-120.3458,1,3.6
+United States,Lincoln,40.8143,-96.7072,1,4.5
+Australia,Phillip Island,-38.4483,145.2378,1,3.7
+Canada,Vineland Station,43.1869,-79.3792,1,4.3
+Australia,Middleton Beach,-35.0259,117.9172,1,3.8

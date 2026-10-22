@@ -9,8 +9,13 @@ data/raw/zomato.csv            # original Kaggle CSV (unchanged)
 data/seed/country_codes.csv    # country code -> country name lookup
 sql/01_load_raw.sql            # loads the CSVs into raw tables
 sql/02_staging.sql             # builds cleaned, analysis-ready tables
+sql/03_marts.sql               # analysis tables that answer the business questions
 sql/eda_01_overview.sql        # starter EDA queries
-scripts/build_db.py            # runs the load + staging SQL -> zomato.duckdb
+scripts/build_db.py            # runs the load, staging and mart SQL -> zomato.duckdb
+scripts/export_dashboard_data.py  # writes the marts to exports/*.csv for the dashboard
+exports/                       # dashboard data (CSV) and the map's land outline
+dashboard/index.html           # source of the published dashboard page
+docs/analysis_plan.md          # business questions, metrics and first findings
 ```
 
 ## Setup
@@ -19,6 +24,7 @@ scripts/build_db.py            # runs the load + staging SQL -> zomato.duckdb
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 python scripts/build_db.py          # creates zomato.duckdb (git-ignored)
+python scripts/export_dashboard_data.py  # refreshes exports/ for the dashboard
 ```
 
 ## Querying
@@ -39,6 +45,10 @@ The DuckDB file can also be opened in DBeaver, DataGrip or VS Code.
 | `restaurants` | 1 row per restaurant | snake_case columns, `country` joined in, `rating` is NULL when not rated |
 | `restaurant_cuisines` | 1 row per restaurant x cuisine | `cuisines` list split apart |
 | `country_codes` | 1 row per country | lookup |
+| `restaurant_regions` | 1 row per restaurant x region | regions overlap (New Delhi is also Delhi NCR and All) |
+| `mart_*` | see `sql/03_marts.sql` | one table per business question, all grouped by region |
+
+See [docs/analysis_plan.md](docs/analysis_plan.md) for the questions each mart answers and the first findings.
 
 ## Data quirks to know
 
